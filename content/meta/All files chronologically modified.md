@@ -35,6 +35,16 @@ Some hidden tags: anything with "exclude" basically
 <!-- QueryToSerialize: TABLE file.folder as "Folder", dateformat(date-modified,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT date-modified DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
 <!-- SerializedQuery: TABLE file.folder as "Folder", dateformat(date-modified,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT date-modified DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
 
+| File                                                                                | Folder     | Modified |
+| ----------------------------------------------------------------------------------- | ---------- | -------- |
+| [[design/Monolithic Architecture.md\|Monolithic Architecture]]                      | design     | \-       |
+| [[design/Microservices.md\|Microservices]]                                          | design     | \-       |
+| [[design/Domain Driven Design(DDD).md\|Domain Driven Design(DDD)]]                  | design     | \-       |
+| [[cache.md\|cache]]                                                                 |            | \-       |
+| [[braindumps/INT134 exam preparation.md\|INT134 exam preparation]]                  | braindumps | \-       |
+| [[blogs/ctf/STH-Mini-Web-CTF-2025 — Write Up.md\|STH-Mini-Web-CTF-2025 — Write Up]] | blogs/ctf  | \-       |
+| [[blogs/WebDevelopment with HTMX.md\|WebDevelopment with HTMX]]                     | blogs      | \-       |
+| [[blogs/WebAssembly with Zig.md\|WebAssembly with Zig]]                             | blogs      | \-       |
 <!-- SerializedQuery END -->
 
 %%
