@@ -61,7 +61,7 @@ const backlinksConfig = {
 }
 
 const breadcrumbsConfig = {
-  rootName: "📚",
+  rootName: "🪴",
 }
 
 const oldexplorerConfig = {

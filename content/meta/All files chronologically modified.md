@@ -14,7 +14,7 @@ Some hidden tags: anything with "exclude" basically
 
  #graph-exclude #backlinks-exclude #recents-exclude #explorer-exclude
 
-[[index|📚 Return to Homepage]]
+[[index| Return to Homepage]]
 
 ### The table
 

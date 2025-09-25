@@ -38,26 +38,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#f5f5f5", // พื้นหลังสว่างสะอาด
+          light: "#e6f4ea",
           lightgray: "#d6d3d1",
-          gray: "#5a5a5a", // เทาเข้มอ่านง่าย
+          gray: "#5a5a5a",
           darkgray: "#2e2e2e",
           dark: "#121212",
-          secondary: "#2f855a", // เขียวเข้ม (ธรรมชาติ)
-          tertiary: "#2563eb", // น้ำเงินสดแทนส้ม
-          highlight: "rgba(37, 99, 235, 0.15)", // ใช้น้ำเงินอ่อน
-          textHighlight: "#2563eb55",
+          secondary: "#2f855a",
+          tertiary: "#4ade80",
+          highlight: "rgba(47, 133, 90, 0.15)",
+          textHighlight: "#4ade8055",
         },
         darkMode: {
-          light: "#121212",
+          light: "#1a1a1a",
           lightgray: "#2e2e2e",
           gray: "#a3a3a3",
           darkgray: "#d6d3d1",
-          dark: "#f5f5f5",
-          secondary: "#38a169", // เขียวสด
-          tertiary: "#7c3aed", // ม่วงแทนส้ม
-          highlight: "rgba(124, 58, 237, 0.15)", // ม่วงอ่อน
-          textHighlight: "#7c3aed55",
+          dark: "#e5e5e5",
+          secondary: "#38a169",
+          tertiary: "#4ade80",
+          highlight: "rgba(56, 161, 105, 0.15)",
+          textHighlight: "#4ade8055",
         },
       },
     },
