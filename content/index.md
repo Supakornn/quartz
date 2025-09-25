@@ -9,16 +9,6 @@ Welcome to my little corner of the internet! I'm **Supakorn** or you can call me
 
 Think of this like my public notebook. I write about things I'm working on, stuff I find interesting, and random thoughts that pop into my head. It's not perfect, and sometimes my English might be a bit weird (I'm still learning!), but that's okay - this is just me sharing what I know.
 
-#### **Table of Content**
-
-**[[blogs/|Blogs]]** - Longer posts about things I'm exploring. I write about some tech stuff that catches my attention.
-
-**[[braindumps/|Brain Dumps]]** - Quick notes and thoughts. Sometimes it's study notes, sometimes just random ideas I don't want to forget.
-
-**[[coding/|Coding]]** - Code snippets, programming concepts, and technical notes that I use as reference.
-
-**[[design/|Design]]** - Software architecture patterns and design principles. I'm trying to understand how to build better software.
-
 #### **A little bit about me**
 
 I'm a student at [sit,kmutt](https://sit.kmutt.ac.th/) who loves tinkering with code and learning new things. I enjoy web development, cybersecurity (especially CTFs), and exploring different programming languages and frameworks.
