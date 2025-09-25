@@ -1,5 +1,5 @@
 ---
-title: Supakorn's Digital Lab
+title: Supakorn's Notebook
 subtitle: info dump website
 tags:
   - recents-exclude
@@ -31,7 +31,3 @@ This website is my way of learning in public - sharing what I discover along the
 This site is built with [Quartz](https://quartz.jzhao.xyz/) and all my notes are connected. You can click on the links to jump between topics, or just browse around and see what catches your eye.
 
 Everything here is a work in progress. I update things as I learn more, so don't be surprised if you see changes. That's just how gardens grow! 🌱
-
----
-
-*Last updated: September 2025*

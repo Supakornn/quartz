@@ -117,12 +117,14 @@ export default ((opts?: Partial<FolderContentOptions>) => {
               })}
             </p>
           )}
-          <p class="page-sparkle-divider">───✱*.｡:｡✱*.:｡✧*.｡✰*.:｡✧*.｡:｡*.｡✱ ───</p>
+          <p class="page-sparkle-divider">───✦✰✦✧✦✰✦✧✦✰✦✧✦✰✦✧✦✰✦✧───</p>
           <div>
             <PageList {...listProps} />
           </div>
         </div>
-        <a href={baseDir} class="internal">{i18n(cfg.locale).pages.error.home}</a>
+        <a href={baseDir} class="internal">
+          {i18n(cfg.locale).pages.error.home}
+        </a>
         <hr />
       </div>
     )

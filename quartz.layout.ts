@@ -43,7 +43,7 @@ const explorerConfig = {
     // dont change name of root node
     if (!node.isFolder) {
       // set emoji for file/folder
-      node.displayName = "⊹ " + node.displayName
+      node.displayName = "✰ " + node.displayName
     }
   },
 }
@@ -61,7 +61,7 @@ const backlinksConfig = {
 }
 
 const breadcrumbsConfig = {
-  rootName: "🏡",
+  rootName: "📚",
 }
 
 const oldexplorerConfig = {
@@ -72,7 +72,7 @@ const oldexplorerConfig = {
     if (node.depth > 0) {
       // set emoji for file/folder
       if (node.file) {
-        node.displayName = "✾ " + node.displayName
+        node.displayName = "✦ " + node.displayName
       } else {
         // node.displayName = "📁 " + node.displayName
       }
@@ -94,29 +94,10 @@ export const sharedPageComponents: SharedLayout = {
       { titles: [mapTitle] },
       Component.RecentNotes({ ...recentNotesConfig, limit: 8 }),
     ),
-    Component.Comments({
-      provider: "giscus",
-      options: {
-        // from data-repo
-        repo: "fanteastick/quartz-test",
-        // from data-repo-id
-        repoId: "R_kgDOMVIwGw",
-        // from data-category
-        category: "Announcements",
-        // from data-category-id
-        categoryId: "DIC_kwDOMVIwG84Cguqi",
-        mapping: "specific",
-        strict: false,
-        reactionsEnabled: false,
-        inputPosition: "top",
-        term: "Guestbook",
-      },
-    }),
   ],
   footer: Component.Footer({
     links: {
-      Main: "https://www.eilleeenz.com/",
-      GitHub: "https://github.com/fanteastick/quartz-test",
+      GitHub: "https://github.com/supakornn/notebook",
     },
   }),
 }
