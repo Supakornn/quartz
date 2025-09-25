@@ -11,7 +11,7 @@ Think of this like my public notebook. I write about things I'm working on, stuf
 
 #### **Table of Content**
 
-**[[blogs/|Blogs]]** - Longer posts about things I'm exploring. I write about web development, CTF challenges, and whatever tech stuff catches my attention.
+**[[blogs/|Blogs]]** - Longer posts about things I'm exploring. I write about some tech stuff that catches my attention.
 
 **[[braindumps/|Brain Dumps]]** - Quick notes and thoughts. Sometimes it's study notes, sometimes just random ideas I don't want to forget.
 
