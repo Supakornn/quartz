@@ -1,7 +1,6 @@
-import 'dotenv/config';
+import "dotenv/config"
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
-
 
 // const myGoatcounterCode = process.env.GOATCOUNTER_CODE as string;
 
@@ -10,41 +9,6 @@ import * as Plugin from "./quartz/plugins"
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
-
-const possiblePageTitles = [
-  "(｡•ㅅ•｡)~✧",
-  "૭( ᵕ•̀ᵕ•́૭)",
-  "(૭ •́ ᵕ•̀ )૭",
-  "(๑>؂·̀๑)",
-  "৻(•̀ᗜ•́৻)",
-  "٩(•̤̀ᵕ•̤́๑)",
-  "(｡•́︿•̀｡)",
-  "ᕙ( •̀ ᗜ •́ )ᕗ",
-  "(๑•́ ₃ •̀๑)",
-  "(づ ̄ ³ ̄)づ",
-  "( ˵ •̀ ᴗ •́˵)",
-  "(๑•́o•̀๑)",
-  "٩(๑❛ᴗ❛๑)6",
-  "(╥﹏╥)",
-  "( ˘ ³˘(◡‿◡˶)",
-  "٩(๑˘•ω•˘๑)٩",
-  "૮ ˶ᵔ ᵕ ᵔ˶ ა",
-  "(˶˃ ᵕ ˂˶).ᐟ",
-  "ദ്ദി •⩊• )",
-  "꒰ᐢ. .ᐢ꒱₊˚⊹",
-  "Ꮺ ָ࣪ ۰ ͙⊹",
-  "˚ʚ♡ɞ˚",
-  "𓂃 ࣪⋆💿˚ ༘",
-  "⸜(｡˃ ᵕ ˂ )⸝♡",
-  "`⎚⩊⎚´ -✧",
-  "(˶˃ ᵕ ˂˶)~✧",
-  "(๑>⋆<๑)~✧",
-  "(˵•̀ ᴗ •́˵)~✧",
-  "(૮ ᵕ•̀ )૮~✧",
-];
-function getRandomPageTitle(): string {
-  return possiblePageTitles[Math.floor(Math.random() * possiblePageTitles.length)];
-}
 
 const config: QuartzConfig = {
   configuration: {
@@ -84,19 +48,19 @@ const config: QuartzConfig = {
         //   tertiary: "#84a59d",
         //   highlight: "rgba(143, 159, 169, 0.15)",
         // },
-      //   'desert-storm': {
-      //     '50': '#fafbf9',
-      //     '100': '#eff2ec',
-      //     '200': '#dde2d5',
-      //     '300': '#bfc9b0',
-      //     '400': '#9bab85',
-      //     '500': '#809166',
-      //     '600': '#677851',
-      //     '700': '#546242',
-      //     '800': '#475339',
-      //     '900': '#3e4733',
-      //     '950': '#292f22',
-      // },
+        //   'desert-storm': {
+        //     '50': '#fafbf9',
+        //     '100': '#eff2ec',
+        //     '200': '#dde2d5',
+        //     '300': '#bfc9b0',
+        //     '400': '#9bab85',
+        //     '500': '#809166',
+        //     '600': '#677851',
+        //     '700': '#546242',
+        //     '800': '#475339',
+        //     '900': '#3e4733',
+        //     '950': '#292f22',
+        // },
         lightMode: {
           light: "#eff2ec",
           lightgray: "#dde2d5",
@@ -132,7 +96,7 @@ const config: QuartzConfig = {
         },
       },
     },
-  },   
+  },
   plugins: {
     transformers: [
       Plugin.Staticrypt(),
@@ -154,7 +118,7 @@ const config: QuartzConfig = {
         keepBackground: false,
       }),
       Plugin.Citations({ bibliographyFile: "./content/bibliography.bib", linkCitations: true }),
-      Plugin.Carousel2({showDots: true}),
+      Plugin.Carousel2({ showDots: true }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
@@ -163,7 +127,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
       // Plugin.ClickableImages(),
-      Plugin.Carousel({showDots: true}),
+      Plugin.Carousel({ showDots: true }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

@@ -1,54 +1,37 @@
 ---
-title: Eilleen's (online!) Everything Notebook
-date created: 2024-05-06T22:24
-date modified: 2025-08-15T00:03
+title: Supakorn's Digital Lab
 subtitle: info dump website
 tags:
   - recents-exclude
-comments: "true"
 ---
 
-Welcome to my digital allocation of space (?).
+Welcome to my little corner of the internet! I'm Supakorn, and this is my digital garden where I put all the stuff I learn and think about.
 
-Throughout high school, bullet journaling was a huge trend (still is, maybe not as huge). I would get the standard college-ruled, 100pgs notebook from the school supplies section and wrote down literally everything in there. Journals, to-do's (a lot to-do back then), brainstorming, math scratch work, etc. I filled up ~6 notebooks with content like this. Those things were so useful!
 
-%% See the [documentation](https://quartz.jzhao.xyz). %%
+Think of this like my public notebook. I write about things I'm working on, stuff I find interesting, and random thoughts that pop into my head. It's not perfect, and sometimes my English might be a bit weird (I'm still learning!), but that's okay - this is just me sharing what I know.
 
-I spent too long changing things on the site, which is all written out in the [[Quartz customization log]], and I also have some more ideas for changing things ([[Quartz Snippets]]), but I still need a [[Quartz Cheatsheet|cheatsheet]] to remember what I'm doing.
+#### **Table of Content**
 
-[[Goals and progress in 2025|This]] is what I'm up to this year. If you're lost, try checking out the 🗺 [[Map|map]], or a list of [[All files chronologically modified]]. My [homepage](https://www.eilleeenz.com/) has links to other things I've put up on the internet.
+**[[blogs/|Blogs]]** - Longer posts about things I'm exploring. I write about web development, CTF challenges, and whatever tech stuff catches my attention.
 
-> [!info] I am desperately in need of friends
-> I think it's generally good for personal growth to meet new and interesting people. Please reach out if you think it'd be fun to talk. 👥 My [Twitter](https://x.com/eilleeenz) & [Bluesky](https://bsky.app/profile/eilleeenz.bsky.social) DM's are open! I also love getting comments on various guestbooks across my sites.
+**[[braindumps/|Brain Dumps]]** - Quick notes and thoughts. Sometimes it's study notes, sometimes just random ideas I don't want to forget.
 
-Why does every digital garden website add a page defining what a digital garden is? 🤷‍♀️ 
+**[[coding/|Coding]]** - Code snippets, programming concepts, and technical notes that I use as reference.
 
-```
-⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣠⣤⣤⣼⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀
-⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀ ______________
-⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀| Hello there! |
-⠀⠀⠀⠘⣿⣿⣿⣿⠟⠁⠀⠀⠀⠹⣿⣿⣿⣿⣿⠟⠁⠀⠀⠹⣿⣿⡿⠀⠀⠀⠀🗩⠀ ‾‾‾‾‾‾‾‾‾‾‾‾‾
-⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⠀⢼⣿⠀⢿⣿⣿⣿⣿⠀⣾⣷⠀⠀⢿⣿⣷⠀⠀⠀⠀⠀
-⠀⠀⠀⢠⣿⣿⣿⣷⡀⠀⠀⠈⠋⢀⣿⣿⣿⣿⣿⡀⠙⠋⠀⢀⣾⣿⣿⠀⠀⠀⠀⠀
-⢀⣀⣀⣀⣿⣿⣿⣿⣿⣶⣶⣶⣶⣿⣿⠛⣿⣾⣿⣷⣦⣤⣴⣿⣿⣿⣿⣤⠤⢤⣤⡄
-⠈⠉⠉⢉⣙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣀⣀⣀⡀⠀
-⠐⠚⠋⠉⢀⣬⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣥⣀⡀⠈⠀⠈⠛
-⠀⠀⠴⠚⠉⠀⠀⠀⠉⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠋⠁⠀⠀⠀⠉⠛⠢⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀
-⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇
-⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀
-⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧
-⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄
-⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
-```
+**[[design/|Design]]** - Software architecture patterns and design principles. I'm trying to understand how to build better software.
 
-The whole site is a work in progress! (it'll always be a work in progress)
+#### **A little bit about me**
 
-On (almost) all my sites, I'm using [[GoatCounter analytics]], which is a privacy-aware, open source web analytics platform.
+I'm a student who loves tinkering with code and learning new things. I enjoy web development, cybersecurity (especially CTFs), and exploring different programming languages and frameworks.
+
+This website is my way of learning in public - sharing what I discover along the way. If something I wrote helps you or if you want to chat about any topic here, that would make me really happy!
+
+#### How this works
+
+This site is built with [Quartz](https://quartz.jzhao.xyz/) and all my notes are connected. You can click on the links to jump between topics, or just browse around and see what catches your eye.
+
+Everything here is a work in progress. I update things as I learn more, so don't be surprised if you see changes. That's just how gardens grow! 🌱
+
+---
+
+*Last updated: September 2025*
