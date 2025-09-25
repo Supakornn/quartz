@@ -1,4 +1,4 @@
-### Research Paper
+### Research
 
 - [LongCat-Flash-Thinking Technical Report](https://arxiv.org/pdf/2509.18883)
 

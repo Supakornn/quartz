@@ -97,7 +97,12 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/supakornn/notebook",
+      Repo: "https://github.com/supakornn/notebook",
+      GitHub: "https://github.com/supakornn",
+      Twitter: "https://twitter.com/supak0rnn",
+      LinkedIn: "https://linkedin.com/in/supakornieamgomol",
+      Instagram: "https://instagram.com/supakornigm",
+      Facebook: "https://facebook.com/spkngap",
     },
   }),
 }
