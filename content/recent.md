@@ -5,10 +5,10 @@ tags:
   - backlinks-exclude
   - recents-exclude
   - "#tracker"
-title: All Modified Files
+title: All files modified
 ---
 
-[[index| Return to Homepage]]
+[[index| 🪴 Return to Homepage]]
 
 ### The table
 
@@ -37,7 +37,7 @@ let pages = dv.pages('')
     p.file &&
     p.file.ext === "md" &&
     !p.file.path.toLowerCase().includes("cool things online/") && // Exclude folder &&
-    !p.file.path.toLowerCase().includes("meta/") &&
+    !p.file.path.toLowerCase().includes("") &&
     !p.file.path.toLowerCase().includes("quartz")
   );
 

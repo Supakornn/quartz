@@ -67,8 +67,8 @@ WebAssembly ทำงานด้วยโมเดลการทำงาน�
 สมมติว่าเรามีฟังก์ชัน **add** ใน Zig:
 
 ```rust
-pub export fn add(a: i32, b: i32) i32 {  
-    return a + b;  
+pub export fn add(a: i32, b: i32) i32 {
+    return a + b;
 }
 ```
 
@@ -109,28 +109,28 @@ Zig เป็นภาษาโปรแกรมมิ่งน้องให�
 ก่อนอื่นเราต้องสร้างไฟล์ **build.zig** เพื่อใช้สำหรับการ compile
 
 ```rust
-const std = @import("std");  
-  
-pub fn build(b: *std.Build) void {  
-    const optimize = b.standardOptimizeOption(.{});  
-  
-    const target = std.Target.Query{  
-        .cpu_arch = .wasm32,  
-        .os_tag = .freestanding,  
-    };  
-  
-    const lib = b.addExecutable(.{  
-        .name = "zig-wasm",  
-        .root_source_file = .{ .cwd_relative = "src/main.zig" },  
-        .target = b.resolveTargetQuery(target),  
-        .optimize = optimize,  
-    });  
-  
-    lib.entry = .disabled;  
-    lib.rdynamic = true;  
-  
-    const install_step = b.addInstallArtifact(lib, .{});  
-    b.getInstallStep().dependOn(&install_step.step);  
+const std = @import("std");
+
+pub fn build(b: *std.Build) void {
+    const optimize = b.standardOptimizeOption(.{});
+
+    const target = std.Target.Query{
+        .cpu_arch = .wasm32,
+        .os_tag = .freestanding,
+    };
+
+    const lib = b.addExecutable(.{
+        .name = "zig-wasm",
+        .root_source_file = .{ .cwd_relative = "src/main.zig" },
+        .target = b.resolveTargetQuery(target),
+        .optimize = optimize,
+    });
+
+    lib.entry = .disabled;
+    lib.rdynamic = true;
+
+    const install_step = b.addInstallArtifact(lib, .{});
+    b.getInstallStep().dependOn(&install_step.step);
 }
 ```
 
@@ -145,10 +145,10 @@ mkdir -p src
 สร้างไฟล์ **src/main.zig**
 
 ```rust
-pub export fn add(a: i32, b: i32) i32 {  
-    return a + b;  
-}  
-  
+pub export fn add(a: i32, b: i32) i32 {
+    return a + b;
+}
+
 export fn _start() void {}
 ```
 
@@ -169,100 +169,100 @@ export fn _start() void {}
 สร้างไฟล์ **index.html**
 
 ```html
-<!DOCTYPE html>  
-<html>  
-  <head>  
-    <title>Zig WebAssembly Demo</title>  
-    <style>      body {  
-        font-family: Arial, sans-serif;  
-        max-width: 800px;  
-        margin: 0 auto;  
-        padding: 20px;  
-        background-color: #f5f5f5;  
-      }  
-      .container {  
-        background-color: white;  
-        padding: 20px;  
-        border-radius: 8px;  
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
-      }  
-      .input-group {  
-        margin-bottom: 20px;  
-      }  
-      input {  
-        padding: 8px;  
-        margin-right: 10px;  
-        border: 1px solid #ddd;  
-        border-radius: 4px;  
-      }  
-      button {  
-        padding: 8px 16px;  
-        background-color: #007bff;  
-        color: white;  
-        border: none;  
-        border-radius: 4px;  
-        cursor: pointer;  
-      }  
-      button:hover {  
-        background-color: #0056b3;  
-      }  
-      .result {  
-        margin-top: 20px;  
-        padding: 10px;  
-        background-color: #e9ecef;  
-        border-radius: 4px;  
-      }    </style>  
-  </head>  
-  <body>  
-    <div class="container">  
-      <h1>Zig WebAssembly Demo</h1>  
-      <p>This demo shows a simple add function implemented in Zig and compiled to WebAssembly.</p>  
-  
-      <div class="input-group">  
-        <input type="number" id="num1" value="5" placeholder="First number" />  
-        <input type="number" id="num2" value="3" placeholder="Second number" />  
-        <button onclick="calculateSum()">Add Numbers</button>  
-      </div>  
-  
-      <div class="result" id="result">Loading WebAssembly module...</div>  
-    </div>  
-  
-    <script>      let wasmInstance = null;  
-  
-      async function init() {  
-        try {  
-          const response = await fetch("zig-out/bin/zig-wasm");  
-          const bytes = await response.arrayBuffer();  
-          const { instance } = await WebAssembly.instantiate(bytes);  
-          wasmInstance = instance;  
-          document.getElementById("result").textContent =  
-            "WebAssembly module loaded! Enter two numbers and click Add.";  
-        } catch (error) {  
-          console.error("Error loading WebAssembly:", error);  
-          document.getElementById("result").textContent =  
-            "Error loading WebAssembly module: " + error.message;  
-        }  
-      }  
-  
-      function calculateSum() {  
-        if (!wasmInstance) {  
-          document.getElementById("result").textContent = "WebAssembly module not loaded yet!";  
-          return;  
-        }  
-  
-        const num1 = parseInt(document.getElementById("num1").value) || 0;  
-        const num2 = parseInt(document.getElementById("num2").value) || 0;  
-  
-        try {  
-          const sum = wasmInstance.exports.add(num1, num2);  
-          document.getElementById("result").textContent = `${num1} + ${num2} = ${sum}`;  
-        } catch (error) {  
-          document.getElementById("result").textContent = "Error calculating sum: " + error.message;  
-        }  
-      }  
-  
-      init().catch(console.error);    </script>  
-  </body>  
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zig WebAssembly Demo</title>
+    <style>      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .input-group {
+        margin-bottom: 20px;
+      }
+      input {
+        padding: 8px;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .result {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e9ecef;
+        border-radius: 4px;
+      }    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Zig WebAssembly Demo</h1>
+      <p>This demo shows a simple add function implemented in Zig and compiled to WebAssembly.</p>
+
+      <div class="input-group">
+        <input type="number" id="num1" value="5" placeholder="First number" />
+        <input type="number" id="num2" value="3" placeholder="Second number" />
+        <button onclick="calculateSum()">Add Numbers</button>
+      </div>
+
+      <div class="result" id="result">Loading WebAssembly module...</div>
+    </div>
+
+    <script>      let wasmInstance = null;
+
+      async function init() {
+        try {
+          const response = await fetch("zig-out/bin/zig-wasm");
+          const bytes = await response.arrayBuffer();
+          const { instance } = await WebAssembly.instantiate(bytes);
+          wasmInstance = instance;
+          document.getElementById("result").textContent =
+            "WebAssembly module loaded! Enter two numbers and click Add.";
+        } catch (error) {
+          console.error("Error loading WebAssembly:", error);
+          document.getElementById("result").textContent =
+            "Error loading WebAssembly module: " + error.message;
+        }
+      }
+
+      function calculateSum() {
+        if (!wasmInstance) {
+          document.getElementById("result").textContent = "WebAssembly module not loaded yet!";
+          return;
+        }
+
+        const num1 = parseInt(document.getElementById("num1").value) || 0;
+        const num2 = parseInt(document.getElementById("num2").value) || 0;
+
+        try {
+          const sum = wasmInstance.exports.add(num1, num2);
+          document.getElementById("result").textContent = `${num1} + ${num2} = ${sum}`;
+        } catch (error) {
+          document.getElementById("result").textContent = "Error calculating sum: " + error.message;
+        }
+      }
+
+      init().catch(console.error);    </script>
+  </body>
 </html>
 ```
 
@@ -271,27 +271,27 @@ export fn _start() void {}
 สร้างไฟล์ **server.py**:
 
 ```python
-from http.server import HTTPServer, SimpleHTTPRequestHandler  
-import sys  
-  
-class CORSRequestHandler(SimpleHTTPRequestHandler):  
-    def end_headers(self):  
-        self.send_header('Access-Control-Allow-Origin', '*')  
-        self.send_header('Access-Control-Allow-Methods', 'GET')  
-        self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')  
-        return super().end_headers()  
-  
-    def do_OPTIONS(self):  
-        self.send_response(200)  
-        self.end_headers()  
-  
-port = 8000  
-print(f"Starting server on port {port}...")  
-httpd = HTTPServer(('localhost', port), CORSRequestHandler)  
-try:  
-    httpd.serve_forever()  
-except KeyboardInterrupt:  
-    print("\nShutting down server...")  
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+import sys
+
+class CORSRequestHandler(SimpleHTTPRequestHandler):
+    def end_headers(self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET')
+        self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
+        return super().end_headers()
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.end_headers()
+
+port = 8000
+print(f"Starting server on port {port}...")
+httpd = HTTPServer(('localhost', port), CORSRequestHandler)
+try:
+    httpd.serve_forever()
+except KeyboardInterrupt:
+    print("\nShutting down server...")
     sys.exit(0)
 ```
 
@@ -301,13 +301,13 @@ except KeyboardInterrupt:
 
 #### 1. compile โค้ด Zig เป็น WebAssembly:
 
-ลบโฟลเดอร์ zig-out ถ้ามี 
+ลบโฟลเดอร์ zig-out ถ้ามี
 
 ```shell
-rm -rf zig-out  
+rm -rf zig-out
 ```
-  
-compile โค้ด  
+
+compile โค้ด
 
 ```shell
 zig build

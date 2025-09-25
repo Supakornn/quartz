@@ -36,7 +36,7 @@ create user credential
 sudo mysql
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass123';
-FLUSH PRIVILEGES; 
+FLUSH PRIVILEGES;
 
 // if mysql_native_password error use this insted
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'pass123';
@@ -51,7 +51,7 @@ create database and table
 ```shell
 sudo mysql -u root -p
 
-CREATE DATABASE mydb;  
+CREATE DATABASE mydb;
 USE mydb;
 
 CREATE TABLE students (
@@ -74,7 +74,7 @@ exit
 testing
 
 ```sql
-show databases; 
+show databases;
 use mydb;
 show tables;
 select * from students;
@@ -87,8 +87,8 @@ select * from students;
 create backend directory
 
 ```shell
-sudo mkdir /srv/backend 
-cd /srv/backend 
+sudo mkdir /srv/backend
+cd /srv/backend
 ```
 
 install mysql & express
@@ -108,7 +108,7 @@ sudo vim index.js | sudo nano index.js
 const express = require("express");
 const mysql = require("mysql2");
 
-const app = express(); 
+const app = express();
 const db = mysql.createConnection({ host:"localhost", user:"root", password:"pass123", database:"mydb" });
 
 app.get("/students", (req,res) => {
@@ -118,7 +118,7 @@ app.get("/students", (req,res) => {
 app.listen(3000);
 ```
 
-create service file 
+create service file
 
 ```shell
 sudo vim /etc/systemd/system/backend.service | sudo nano /etc/systemd/system/backend.service
@@ -161,9 +161,9 @@ sudo vim /etc/nginx/sites-available/default | sudo nano /etc/nginx/sites-availab
 ```
 
 ```shell
-location /api/ {  
-	proxy_pass http://127.0.0.1:3000;  
-	proxy_set_header Host $host;  
+location /api/ {
+	proxy_pass http://127.0.0.1:3000;
+	proxy_set_header Host $host;
 	proxy_set_header X-Real-IP $remote_addr;
 }
 ```

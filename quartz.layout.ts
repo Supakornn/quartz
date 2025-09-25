@@ -51,7 +51,7 @@ const recentNotesConfig = {
   showTags: false,
   title: "Recently edited notes:",
   showDate: true,
-  linkToMore: ("meta/" + modifiedListTitle) as SimpleSlug,
+  linkToMore: modifiedListTitle as SimpleSlug,
   excludeTags: ["recents-exclude", "slurp", "external"],
   filter: (f: QuartzPluginData) => !f.slug!.startsWith("tags/") && !f.slug!.endsWith("/index"),
 }

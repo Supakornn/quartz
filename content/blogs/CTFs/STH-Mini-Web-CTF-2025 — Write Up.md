@@ -120,7 +120,7 @@ hashcat -a 0 -m 16500 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImI4MTk0
 
 เราจะใช้ python สำหรับ sign token
 
-import jwt  
+import jwt
 print(jwt.encode({ "token": "73eb7063-f8c3-4e50-bea2-07c05681aa92"}, '"bobcats"', algorithm="HS256"))
 
 ![](https://cdn-images-1.medium.com/max/800/1*woGgxRc0ghPoRvdEphHaYw.png)
@@ -180,7 +180,7 @@ logic ของการทำงาน คือ
 
 เช่นแบบนี้
 
-12345  
+12345
 STH
 
 เพราะบรรทัดแรกจะถูกตรวจสอบว่าถูกต้องด้วย Regx แต่บรรทัดที่ 2 มีคำว่า STH ทำให้ logic ของระบบเป็น True && True และเราก็จะได้ Flag
