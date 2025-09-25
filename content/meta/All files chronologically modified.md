@@ -10,41 +10,29 @@ date created: 2024-07-20T22:16
 date modified: 2025-08-27T22:06
 ---
 
-Table below made with the help of [Dataview](https://blacksmithgu.github.io/obsidian-dataview/) and [Obsidian Dataview Serializer](https://github.com/dsebastien/obsidian-dataview-serializer). The query:
-
-```
-TABLE
-file.folder as "Folder", dateformat(date-modified,"MMM d, yyyy") as "Modified"
-FROM -"tags" AND -#slurp
-SORT date-modified DESC
-WHERE file.name != this.file.name AND file.name != "index" AND draft != "true"
-```
-
-Fun fact - if I set it up correctly, this page won't show up in Explorer, Graph, RecentNotes, TagList, or Backlinks! Also the folders view and the tags view. The changes are explained [[Hiding tags from various components|here]]. But it *will* show up in search, and also linked to "view more" on the RecentNotes component. If on mobile, the table looks cramped - sorry! To force an update, Command Palette --> Dataview serializer scan and serialize all dataview queries; also I added a Commander button.
-
 Some hidden tags: anything with "exclude" basically
 
  #graph-exclude #backlinks-exclude #recents-exclude #explorer-exclude
 
-[[index|🏡 Return to Homepage]]
+[[index|📚 Return to Homepage]]
 
 ### The table
 
 %% note to self it's finicky with spaces so i was having some trouble but turns out it's bc i had an extra space at the end %%
 
-<!-- QueryToSerialize: TABLE file.folder as "Folder", dateformat(date-modified,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT date-modified DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
-<!-- SerializedQuery: TABLE file.folder as "Folder", dateformat(date-modified,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT date-modified DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
+<!-- QueryToSerialize: TABLE file.folder as "Folder", dateformat(file.mtime,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT file.mtime DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
+<!-- SerializedQuery: TABLE file.folder as "Folder", dateformat(file.mtime,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT file.mtime DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
 
-| File                                                                                | Folder     | Modified |
-| ----------------------------------------------------------------------------------- | ---------- | -------- |
-| [[design/Monolithic Architecture.md\|Monolithic Architecture]]                      | design     | \-       |
-| [[design/Microservices.md\|Microservices]]                                          | design     | \-       |
-| [[design/Domain Driven Design(DDD).md\|Domain Driven Design(DDD)]]                  | design     | \-       |
-| [[cache.md\|cache]]                                                                 |            | \-       |
-| [[braindumps/INT134 exam preparation.md\|INT134 exam preparation]]                  | braindumps | \-       |
-| [[blogs/ctf/STH-Mini-Web-CTF-2025 — Write Up.md\|STH-Mini-Web-CTF-2025 — Write Up]] | blogs/ctf  | \-       |
-| [[blogs/WebDevelopment with HTMX.md\|WebDevelopment with HTMX]]                     | blogs      | \-       |
-| [[blogs/WebAssembly with Zig.md\|WebAssembly with Zig]]                             | blogs      | \-       |
+| File                                                                                | Folder     | Modified     |
+| ----------------------------------------------------------------------------------- | ---------- | ------------ |
+| [[design/Monolithic Architecture.md\|Monolithic Architecture]]                      | design     | Sep 26, 2025 |
+| [[design/Microservices.md\|Microservices]]                                          | design     | Sep 26, 2025 |
+| [[design/Domain Driven Design(DDD).md\|Domain Driven Design(DDD)]]                  | design     | Sep 26, 2025 |
+| [[cache.md\|cache]]                                                                 |            | Sep 26, 2025 |
+| [[braindumps/INT134 exam preparation.md\|INT134 exam preparation]]                  | braindumps | Sep 26, 2025 |
+| [[blogs/ctf/STH-Mini-Web-CTF-2025 — Write Up.md\|STH-Mini-Web-CTF-2025 — Write Up]] | blogs/ctf  | Sep 26, 2025 |
+| [[blogs/WebDevelopment with HTMX.md\|WebDevelopment with HTMX]]                     | blogs      | Sep 26, 2025 |
+| [[blogs/WebAssembly with Zig.md\|WebAssembly with Zig]]                             | blogs      | Sep 26, 2025 |
 <!-- SerializedQuery END -->
 
 %%
