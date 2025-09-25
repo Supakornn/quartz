@@ -38,26 +38,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#f2f2f2",
-          lightgray: "#c9c9c9",
-          gray: "#7d7d7d",
-          darkgray: "#3e3e3e",
-          dark: "#1c1c1c",
-          secondary: "#3f7d4e",
-          tertiary: "#88a67c",
-          highlight: "rgba(63, 125, 78, 0.15)",
-          textHighlight: "#88a67c55",
+          light: "#f5f5f5", // พื้นหลังสว่างสะอาด
+          lightgray: "#d6d3d1",
+          gray: "#5a5a5a", // เทาเข้มอ่านง่าย
+          darkgray: "#2e2e2e",
+          dark: "#121212",
+          secondary: "#2f855a", // เขียวเข้ม (ธรรมชาติ)
+          tertiary: "#2563eb", // น้ำเงินสดแทนส้ม
+          highlight: "rgba(37, 99, 235, 0.15)", // ใช้น้ำเงินอ่อน
+          textHighlight: "#2563eb55",
         },
         darkMode: {
-          light: "#1c1c1c",
-          lightgray: "#3e3e3e",
-          gray: "#7d7d7d",
-          darkgray: "#c9c9c9",
-          dark: "#f2f2f2",
-          secondary: "#4caf60",
-          tertiary: "#a6c49f",
-          highlight: "rgba(76, 175, 96, 0.15)",
-          textHighlight: "#a6c49f55",
+          light: "#121212",
+          lightgray: "#2e2e2e",
+          gray: "#a3a3a3",
+          darkgray: "#d6d3d1",
+          dark: "#f5f5f5",
+          secondary: "#38a169", // เขียวสด
+          tertiary: "#7c3aed", // ม่วงแทนส้ม
+          highlight: "rgba(124, 58, 237, 0.15)", // ม่วงอ่อน
+          textHighlight: "#7c3aed55",
         },
       },
     },
