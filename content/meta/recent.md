@@ -5,14 +5,8 @@ tags:
   - backlinks-exclude
   - recents-exclude
   - "#tracker"
-title: All files chronologically modified
-date created: 2024-07-20T22:16
-date modified: 2025-08-27T22:06
+title: All Modified Files
 ---
-
-Some hidden tags: anything with "exclude" basically
-
- #graph-exclude #backlinks-exclude #recents-exclude #explorer-exclude
 
 [[index| Return to Homepage]]
 
@@ -23,16 +17,16 @@ Some hidden tags: anything with "exclude" basically
 <!-- QueryToSerialize: TABLE file.folder as "Folder", dateformat(file.mtime,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT file.mtime DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
 <!-- SerializedQuery: TABLE file.folder as "Folder", dateformat(file.mtime,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT file.mtime DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
 
-| File                                                                                | Folder     | Modified     |
-| ----------------------------------------------------------------------------------- | ---------- | ------------ |
-| [[design/Monolithic Architecture.md\|Monolithic Architecture]]                      | design     | Sep 26, 2025 |
-| [[design/Microservices.md\|Microservices]]                                          | design     | Sep 26, 2025 |
-| [[design/Domain Driven Design(DDD).md\|Domain Driven Design(DDD)]]                  | design     | Sep 26, 2025 |
-| [[cache.md\|cache]]                                                                 |            | Sep 26, 2025 |
-| [[braindumps/INT134 exam preparation.md\|INT134 exam preparation]]                  | braindumps | Sep 26, 2025 |
-| [[blogs/ctf/STH-Mini-Web-CTF-2025 — Write Up.md\|STH-Mini-Web-CTF-2025 — Write Up]] | blogs/ctf  | Sep 26, 2025 |
-| [[blogs/WebDevelopment with HTMX.md\|WebDevelopment with HTMX]]                     | blogs      | Sep 26, 2025 |
-| [[blogs/WebAssembly with Zig.md\|WebAssembly with Zig]]                             | blogs      | Sep 26, 2025 |
+| File                                                                                 | Folder     | Modified     |
+| ------------------------------------------------------------------------------------ | ---------- | ------------ |
+| [[blogs/WebDevelopment with HTMX.md\|WebDevelopment with HTMX]]                      | blogs      | Sep 26, 2025 |
+| [[design/Monolithic Architecture.md\|Monolithic Architecture]]                       | design     | Sep 26, 2025 |
+| [[design/Microservices.md\|Microservices]]                                           | design     | Sep 26, 2025 |
+| [[design/Domain Driven Design(DDD).md\|Domain Driven Design(DDD)]]                   | design     | Sep 26, 2025 |
+| [[cache.md\|cache]]                                                                  |            | Sep 26, 2025 |
+| [[braindumps/INT134 exam preparation.md\|INT134 exam preparation]]                   | braindumps | Sep 26, 2025 |
+| [[blogs/CTFs/STH-Mini-Web-CTF-2025 — Write Up.md\|STH-Mini-Web-CTF-2025 — Write Up]] | blogs/CTFs | Sep 26, 2025 |
+| [[blogs/WebAssembly with Zig.md\|WebAssembly with Zig]]                              | blogs      | Sep 26, 2025 |
 <!-- SerializedQuery END -->
 
 %%

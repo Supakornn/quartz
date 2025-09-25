@@ -9,7 +9,7 @@ import { FileNode } from "./quartz/components/_ExplorerNodeOld"
 
 // Constants for config that are reused a lot
 const homepageTitle = "Supakorn's Notebook"
-const modifiedListTitle = "All-files-chronologically-modified"
+const modifiedListTitle = "recent"
 const mapTitle = "Map"
 const tagsToRemove = [
   "graph-exclude",
