@@ -1,6 +1,5 @@
 ---
 tags:
-  - system-design
   - software-architecture
 ---
 Monolithic Architecture is software design methodology that combines all of an application's components into a single

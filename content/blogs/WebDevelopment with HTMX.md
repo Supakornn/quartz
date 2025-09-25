@@ -1,8 +1,6 @@
 ---
 tags:
   - blog
-  - web
-  - htmx
 ---
 
 วันนี้เราจะมาลองเล่น HTMX ซึ่งเป็น JavaScript library ที่กำลังมาแรงในวงการพัฒนาเว็บ
