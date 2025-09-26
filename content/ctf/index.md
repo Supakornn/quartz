@@ -4,4 +4,6 @@ This is where I document my solutions, thought processes, and learning experienc
 
 This directory contains detailed write-ups of CTF challenges I've solved:
 
-My Account: (HackTheBox)[]
+**Links:**
+[HackTheBox](https://app.hackthebox.com/users/2078635)
+[TryHackMe](https://tryhackme.com/p/Supakornn)
