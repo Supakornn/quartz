@@ -4,7 +4,7 @@ tags:
 ---
 ![[Pasted image 20250927060120.png]]
 
-**Microservices architecture** is a modern approach where an application is broken down into a collection of small, independent services. Each service is responsible for a specific business capability, runs in its own process, and communicates with others through lightweight protocols such as [[HTTP/REST]], [[gRPC]], or [[messaging systems]].
+**Microservices architecture** is a modern approach where an application is broken down into a collection of small, independent services. Each service is responsible for a specific business capability, runs in its own process, and communicates with others through lightweight protocols such as [[RESTful]], [[gRPC]], or [[messaging systems]].
 
 ### Characteristics
 - Application split into multiple independent services
