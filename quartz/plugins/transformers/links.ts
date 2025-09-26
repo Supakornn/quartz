@@ -37,6 +37,7 @@ import {
   defaultExternalSvg,
   fandomSvg,
   redditSvg,
+  facebookSvg,
 } from "../../components/_svg"
 
 interface Options {
@@ -277,8 +278,8 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   ctx.node.children.push(redditSvg)
                 } else if (linkTypes.isBsky) {
                   ctx.node.children.push(bskySvg)
-                } else if (linkTypes.isYoutube) {
-                  ctx.node.children.push(youtubeSvg)
+                } else if (linkTypes.isFacebook) {
+                  ctx.node.children.push(facebookSvg)
                 } else if (
                   // !linkTypes.isEmbedTwitter &&
                   !linkTypes.isCslNode &&
