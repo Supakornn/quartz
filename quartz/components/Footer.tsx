@@ -28,14 +28,24 @@ export default ((opts?: Options) => {
           ))}
         </ul>
         <p></p>
-        <ul>
-          <li>
-            <a href="#">Scroll to top ↑</a>
-          </li>
-          <li>
-            <a id="random-page-button">Random Page 🎲</a>
-          </li>
-        </ul>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <ul>
+            <li>
+              <a href="#">Scroll to top ↑</a>
+            </li>
+            <li>
+              <a id="random-page-button">Random Page 🎲</a>
+            </li>
+          </ul>
+          <a href="https://webring.wonderful.software#supakorn.info" title="วงแหวนเว็บ">
+            <img
+              alt="วงแหวนเว็บ"
+              width="12"
+              height="12"
+              src="https://webring.wonderful.software/webring.svg"
+            />
+          </a>
+        </div>
       </footer>
     )
   }
