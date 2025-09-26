@@ -35,9 +35,7 @@ export default ((opts?: Options) => {
           <li>
             <a id="random-page-button">Random Page 🎲</a>
           </li>
-          <li>
-            <a></a>
-          </li>
+          li
         </ul>
       </footer>
     )
