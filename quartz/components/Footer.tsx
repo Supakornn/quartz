@@ -26,12 +26,10 @@ export default ((opts?: Options) => {
               <a href={link}>{text}</a>
             </li>
           ))}
+          <li>
+            <a href="#">Webring</a>
+          </li>
         </ul>
-        <li>
-          <a href="#">
-            Webring <img src="" alt="Webring" />
-          </a>
-        </li>
         <p></p>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <ul>
