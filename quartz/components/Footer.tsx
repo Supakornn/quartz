@@ -27,6 +27,7 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
+        <li></li>
         <p></p>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <ul>
@@ -37,14 +38,6 @@ export default ((opts?: Options) => {
               <a id="random-page-button">Random Page 🎲</a>
             </li>
           </ul>
-          <a href="https://webring.wonderful.software#supakorn.info" title="วงแหวนเว็บ">
-            <img
-              alt="วงแหวนเว็บ"
-              width="12"
-              height="12"
-              src="https://webring.wonderful.software/webring.svg"
-            />
-          </a>
         </div>
       </footer>
     )
