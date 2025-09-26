@@ -19,15 +19,15 @@ title: All files modified
 
 | File                                                                     | Folder    | Modified     |
 | ------------------------------------------------------------------------ | --------- | ------------ |
+| [[design/Monolithic.md\|Monolithic]]                                     | design    | Sep 27, 2025 |
+| [[blog/WebAssembly with Zig (TH).md\|WebAssembly with Zig (TH)]]         | blog      | Sep 27, 2025 |
+| [[blog/WebDevelopment with HTMX (TH).md\|WebDevelopment with HTMX (TH)]] | blog      | Sep 26, 2025 |
 | [[braindump/INT134 exam preparation.md\|INT134 exam preparation]]        | braindump | Sep 26, 2025 |
 | [[coding/go.md\|go]]                                                     | coding    | Sep 26, 2025 |
 | [[cache.md\|cache]]                                                      |           | Sep 26, 2025 |
-| [[design/Monolithic.md\|Monolithic]]                                     | design    | Sep 26, 2025 |
-| [[blog/WebAssembly with Zig (TH).md\|WebAssembly with Zig (TH)]]         | blog      | Sep 26, 2025 |
 | [[design/Microservices.md\|Microservices]]                               | design    | Sep 26, 2025 |
 | [[design/Domain Driven Design(DDD).md\|Domain Driven Design(DDD)]]       | design    | Sep 26, 2025 |
-| [[blog/WebDevelopment with HTMX (TH).md\|WebDevelopment with HTMX (TH)]] | blog      | Sep 26, 2025 |
-| [[STH-Mini-Web-CTF-2025 (TH)\|STH-Mini-Web-CTF-2025 (TH)]]  | blog/CTFs | Sep 26, 2025 |
+| [[ctf/STH-Mini-Web-CTF-2025 (TH).md\|STH-Mini-Web-CTF-2025 (TH)]]        | ctf       | Sep 26, 2025 |
 <!-- SerializedQuery END -->
 
 %%
