@@ -28,7 +28,7 @@ import {
   githubSvg,
   substackSvg,
   svgOptions,
-  // twitterSvg,
+  twitterSvg,
   openaiSvg,
   hfSvg,
   obsidianSvg,
@@ -38,8 +38,6 @@ import {
   fandomSvg,
   redditSvg,
 } from "../../components/_svg"
-
-
 
 interface Options {
   enableArxivEmbed: boolean
@@ -152,7 +150,6 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 const isExternal = isAbsoluteUrl(dest)
                 classes.push(isExternal ? "external" : "internal")
 
-
                 // Initialize context object
                 const ctx: LinkContext = {
                   classes,
@@ -167,7 +164,6 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
 
                 // Link type checks
                 const linkTypes = {
-                  isApexDomain: dest.includes("eilleeenz"),
                   isCslNode: classes.includes("csl-external-link"),
                   // isEmbedTwitter: filterEmbedTwitter(node),
                   isArxiv: dest.includes("arxiv.org"),
@@ -220,8 +216,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                     h("img.inline-icons", {
                       src,
                       alt,
-                      style:
-                        "height: 1em; width: 1em; margin-left: 3px; position: relative;",
+                      style: "height: 1em; width: 1em; margin-left: 3px; position: relative;",
                     }),
                   )
 
@@ -238,7 +233,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   ctx.node.children.push(
                     createIconElement("/static/favicons/wikipedia.avif", "Wikipedia"),
                   )
-                // } else if (linkTypes.isApexDomain && file.data.slug! !== "index") {
+                  // } else if (linkTypes.isApexDomain && file.data.slug! !== "index") {
                 } else if (linkTypes.isApexDomain) {
                   ctx.node.children.push(createIconElement("/static/profile_pic_2025.png", "apex"))
                 } else if (linkTypes.isArxiv) {
@@ -248,9 +243,9 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                     createIconElement("/static/favicons/lesswrong.avif", "LessWrong"),
                   )
                 } else if (linkTypes.isSteam) {
-                    ctx.node.children.push(
-                      createIconElement("/static/favicons/Steam_Logo.png", "Steam"),
-                    )
+                  ctx.node.children.push(
+                    createIconElement("/static/favicons/Steam_Logo.png", "Steam"),
+                  )
                 } else if (linkTypes.isQuartz) {
                   ctx.node.children.push(createIconElement("/static/favicons/quartz.png", "Quartz"))
                 } else if (linkTypes.isYoutube) {
@@ -277,8 +272,8 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   ctx.node.children.push(pplxSvg)
                 } else if (linkTypes.isSubstack) {
                   ctx.node.children.push(substackSvg)
-                // } else if (linkTypes.isTwitter) {
-                //   ctx.node.children.push(twitterSvg)
+                  // } else if (linkTypes.isTwitter) {
+                  //   ctx.node.children.push(twitterSvg)
                 } else if (linkTypes.isReddit) {
                   ctx.node.children.push(redditSvg)
                 } else if (linkTypes.isBsky) {
