@@ -22,3 +22,4 @@ A **monolithic architecture** is a traditional model of software development whe
 - Risk of "[[big ball of mud]]" as codebase grows
 - Any change requires full redeployment
 - Technology stack is locked across the entire app
+
