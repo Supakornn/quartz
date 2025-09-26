@@ -5,7 +5,7 @@ tags:
 
 ![[Pasted image 20250927051052.png]]
 
-A **Monolithic architecture** is a software design methodology that combines all of an application's components into a single, inseparable unit. Under this architecture, the user interface, business logic, and data access layers are all created, put into use, and maintained as one, unified unit.
+A **monolithic architecture** is a traditional model of software development where the entire application is built as a single codebase. All components such as the user interface, business logic, and data access layer are tightly coupled and deployed together.
 
 ### Characteristics
 - Simple to develop, test, and deploy in early stages
