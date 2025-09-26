@@ -29,7 +29,7 @@ export default ((opts?: Options) => {
         </ul>
         <li>
           <a href="#">
-            Webring <img src="/webring.svg" alt="Webring" />
+            Webring <img src="" alt="Webring" />
           </a>
         </li>
         <p></p>
