@@ -5,7 +5,7 @@ tags:
 
 ![[Pasted image 20250927051052.png]]
 
-A **monolithic architecture** is a traditional model of software development where the entire application is built as a single codebase. All components such as the user interface, business logic, and data access layer are tightly coupled and deployed together.
+A **monolithic architecture** is a traditional model of software development where the entire application is built as a single codebase. All components are tightly coupled and deployed together.
 
 ### Characteristics
 - Simple to develop, test, and deploy in early stages
@@ -19,10 +19,6 @@ A **monolithic architecture** is a traditional model of software development whe
 
 ### Disadvantages
 - Hard to scale individual components
-- Risk of "big ball of mud" as codebase grows
+- Risk of "[[big ball of mud]]" as codebase grows
 - Any change requires full redeployment
 - Technology stack is locked across the entire app
-
-### See also
-- [[202405201205-microservices-architecture|Microservices Architecture]]
-- [[202405201210-monolithic-vs-microservices|Monolithic vs Microservices]]
