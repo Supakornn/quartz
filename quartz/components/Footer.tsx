@@ -26,12 +26,15 @@ export default ((opts?: Options) => {
               <a href={link}>{text}</a>
             </li>
           ))}
-          <li>
-            <a href="#">Webring</a>
-          </li>
         </ul>
-        <p></p>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
           <ul>
             <li>
               <a href="#">Scroll to top ↑</a>
@@ -40,6 +43,16 @@ export default ((opts?: Options) => {
               <a id="random-page-button">Random Page 🎲</a>
             </li>
           </ul>
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+            <a href="https://webring.wonderful.software#supakorn.info" title="วงแหวนเว็บ">
+              <img
+                alt="วงแหวนเว็บ"
+                width="24"
+                height="24"
+                src="https://webring.wonderful.software/webring.svg"
+              />
+            </a>
+          </div>
         </div>
       </footer>
     )
