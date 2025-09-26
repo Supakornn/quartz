@@ -4,7 +4,7 @@ tags:
 ---
 ### Overview
 
-- **Defination**: - Monolithic architecture is a single unified application where all application's modules are combined into one codebase and deployed as a single unit.
+- **Defination**: Monolithic architecture is a single unified application where all application's modules are combined into one codebase and deployed as a single unit.
 
 - **Advantages**:
 	- Simple to develop
