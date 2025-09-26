@@ -37,7 +37,6 @@ import {
   defaultExternalSvg,
   fandomSvg,
   redditSvg,
-  facebookSvg,
 } from "../../components/_svg"
 
 interface Options {
@@ -179,7 +178,6 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   isPerplexity: dest.includes("pplx.ai") || dest.includes("perplexity.ai"),
                   isSubstack: dest.includes("substack.com"),
                   isTwitter: dest.includes("twitter.com"),
-                  isFacebook: dest.includes("facebook.com"),
                   isBsky: dest.includes("bsky.app"),
                   isDoi: dest.includes("doi.org"),
                   isOpenai: dest.includes("openai.com"),
@@ -278,8 +276,6 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   ctx.node.children.push(redditSvg)
                 } else if (linkTypes.isBsky) {
                   ctx.node.children.push(bskySvg)
-                } else if (linkTypes.isFacebook) {
-                  ctx.node.children.push(facebookSvg)
                 } else if (
                   // !linkTypes.isEmbedTwitter &&
                   !linkTypes.isCslNode &&
