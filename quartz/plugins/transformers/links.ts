@@ -17,7 +17,7 @@ import path from "path"
 import { visit } from "unist-util-visit"
 import isAbsoluteUrl from "is-absolute-url"
 import { Element } from "hast"
-// import { filterEmbedTwitter, twitterUrlRegex } from "./twitter"
+// import { filterEmbedTwitter, twitterUrlRegex } from "./Twitter"
 import { h, s } from "hastscript"
 import {
   anthropicSvg,
@@ -177,7 +177,8 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   isGithub: dest.includes("github.com"),
                   isPerplexity: dest.includes("pplx.ai") || dest.includes("perplexity.ai"),
                   isSubstack: dest.includes("substack.com"),
-                  // isTwitter: twitterUrlRegex.test(dest),
+                  isTwitter: dest.includes("twitter.com"),
+                  isFacebook: dest.includes("facebook.com"),
                   isBsky: dest.includes("bsky.app"),
                   isDoi: dest.includes("doi.org"),
                   isOpenai: dest.includes("openai.com"),
@@ -234,8 +235,6 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                     createIconElement("/static/favicons/wikipedia.avif", "Wikipedia"),
                   )
                   // } else if (linkTypes.isApexDomain && file.data.slug! !== "index") {
-                } else if (linkTypes.isApexDomain) {
-                  ctx.node.children.push(createIconElement("/static/profile_pic_2025.png", "apex"))
                 } else if (linkTypes.isArxiv) {
                   ctx.node.children.push(createIconElement("/static/favicons/arxiv.avif", "arXiv"))
                 } else if (linkTypes.isLessWrong) {
@@ -272,12 +271,14 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   ctx.node.children.push(pplxSvg)
                 } else if (linkTypes.isSubstack) {
                   ctx.node.children.push(substackSvg)
-                  // } else if (linkTypes.isTwitter) {
-                  //   ctx.node.children.push(twitterSvg)
+                } else if (linkTypes.isTwitter) {
+                  ctx.node.children.push(twitterSvg)
                 } else if (linkTypes.isReddit) {
                   ctx.node.children.push(redditSvg)
                 } else if (linkTypes.isBsky) {
                   ctx.node.children.push(bskySvg)
+                } else if (linkTypes.isYoutube) {
+                  ctx.node.children.push(youtubeSvg)
                 } else if (
                   // !linkTypes.isEmbedTwitter &&
                   !linkTypes.isCslNode &&
