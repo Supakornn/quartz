@@ -2,8 +2,6 @@
 tags:
   - software-architecture
 ---
-![[Pasted image 20250927060120.png]]
-
 **Microservices** is a way to build software by splitting an app into small, independent services. Each service does one specific job and talks to other services using [[RESTful]], [[gRPC]], or [[messaging systems]].
 
 ### Characteristics

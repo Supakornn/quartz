@@ -2,24 +2,24 @@
 tags:
   - software-architecture
 ---
-
-![[Pasted image 20250927051052.png]]
-
-**Monolithic architecture** is a traditional model of software development where the entire application is built as a single codebase. All components are tightly coupled and deployed together.
+**Monolithic** is the traditional way to build software. The whole app is one big codebase. UI, business logic, and database access are all together in one system.
 
 ### Characteristics
-- Simple to develop, test, and deploy in early stages
-- Single codebase and deployment artifact
-- Shared memory space and database
 
+- Single codebase
+- One deployment for the whole app
+- Shared memory and database
+    
 ### Advantages
-- Easier debugging and testing (everything runs in one process)
-- Lower operational complexity for small teams
-- Faster initial development velocity
+
+- Easy to debug and test (everything in one process)
+- Simple operations for small teams
+- Fast initial development
+    
 
 ### Disadvantages
-- Hard to scale individual components
-- Risk of "[[big ball of mud]]" as codebase grows
-- Any change requires full redeployment
-- Technology stack is locked across the entire app
 
+- Hard to scale individual parts
+- Code can become messy (“[[Big Ball Of Mud]]”)
+- Any change needs full redeploy
+- Technology stack is locked for the whole app
