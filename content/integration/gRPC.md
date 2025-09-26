@@ -7,7 +7,7 @@ tags:
 ### Characteristics
 
 - Uses **RPC**: client calls a function on the server like it’s local
-- Uses **Protocol Buffers (protobuf)** for data (small and fast)
+- Uses [[protobuf]] for data (small and fast)
 - Supports multiple languages (polyglot)
 - Can do streaming: send/receive multiple messages in a single connection
 - Works over HTTP/2 for faster communication
