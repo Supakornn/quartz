@@ -5,21 +5,36 @@ tags:
 
 ![[Pasted image 20250927051052.png]]
 
-A **monolithic architecture** is a traditional model of software development where the entire application is built as a single codebase. All components are tightly coupled and deployed together.
+**Microservices architecture** is a modern approach where an application is broken down into a collection of small, independent services. Each service is responsible for a specific business capability, runs in its own process, and communicates with others through lightweight protocols such as HTTP/REST, gRPC, or messaging systems.
 
 ### Characteristics
-- Simple to develop, test, and deploy in early stages
-- Single codebase and deployment artifact
-- Shared memory space and database
 
+- Application split into multiple independent services
+- Each service runs in its own process (independent runtime)
+- Services communicate via APIs or messaging queues
+- Decentralized data management (each service may have its own database)
+- Polyglot: different services can use different technology stacks
+- Independently deployable and scalable
+    
 ### Advantages
-- Easier debugging and testing (everything runs in one process)
-- Lower operational complexity for small teams
-- Faster initial development velocity
+
+- Independent scaling of services based on demand
+- Easier to adopt new technologies in individual services
+- Fault isolation: failure in one service doesn’t crash the whole system
+    
+- Teams can work autonomously on different services
+    
+- Continuous delivery and faster iterations
+    
 
 ### Disadvantages
-- Hard to scale individual components
-- Risk of "[[big ball of mud]]" as codebase grows
-- Any change requires full redeployment
-- Technology stack is locked across the entire app
 
+- Increased operational complexity (orchestration, networking, monitoring)
+    
+- More difficult debugging and testing (distributed environment)
+    
+- Requires strong DevOps and automation practices
+    
+- Data consistency challenges (distributed databases)
+    
+- Higher initial setup cost compared to monolith

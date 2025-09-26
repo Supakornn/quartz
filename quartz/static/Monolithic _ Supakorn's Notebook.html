@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:8080/design/Monolithic -->
+<html lang="en" saved-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Monolithic | Supakorn's Notebook</title><script src="./Monolithic _ Supakorn&#39;s Notebook_files/abcjs-basic-min.js"></script><script src="./Monolithic _ Supakorn&#39;s Notebook_files/abcjs-plugin-min.js" type="text/javascript"></script><script type="text/javascript">window.ABCJS.plugin.render_before = true; window.ABCJS.plugin.midi_options = &amp;lbraceprogram: 41&amp;rbrace; //window.ABCJS.plugin.debug = true; //responsiveness: window.ABCJS.plugin.render_options = &amp;lbrace responsive: 'resize', scale: 0.8, &amp;rbrace; function handleResize() &amp;lbrace const abcElements = document.querySelectorAll('.abcjs-container'); abcElements.forEach(element => &amp;lbrace const abcNotation = element.getAttribute('data-abc'); if (abcNotation) &amp;lbrace ABCJS.renderAbc(element, abcNotation, window.ABCJS.plugin.render_options); &amp;rbrace &amp;rbrace); &amp;rbrace window.addEventListener('resize', handleResize); window.addEventListener('nav', function() &amp;lbrace handleResize(); &amp;rbrace); window.addCleanup(() => &amp;lbrace window.removeEventListener(&quot;resize&quot;, handleResize) &amp;rbrace)</script><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/"><link rel="stylesheet" href="./Monolithic _ Supakorn&#39;s Notebook_files/css2"><link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin="anonymous"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="og:site_name" content="supakorn.info"><meta property="og:title" content="Monolithic | Supakorn&#39;s Notebook"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Monolithic | Supakorn&#39;s Notebook"><meta name="twitter:description" content="A monolithic architecture is a traditional model of software development where the entire application is built as a single codebase."><meta property="og:description" content="A monolithic architecture is a traditional model of software development where the entire application is built as a single codebase."><meta property="og:image:alt" content="A monolithic architecture is a traditional model of software development where the entire application is built as a single codebase."><meta property="twitter:domain" content="supakorn.info"><meta property="og:url" content="https://supakorn.info/design/Monolithic"><meta property="twitter:url" content="https://supakorn.info/design/Monolithic"><link rel="icon" href="http://localhost:8080/static/icon2.png"><meta name="description" content="A monolithic architecture is a traditional model of software development where the entire application is built as a single codebase."><meta name="generator" content="Quartz"><meta name="custom-comment-fanteastick-ez" content="My &#39;i was here&#39; moment! check out eilleeenz.com"><link href="./Monolithic _ Supakorn&#39;s Notebook_files/index.css" rel="stylesheet" type="text/css" spa-preserve=""><style>:root {
+  --telescope-highlight: #fcc16d55;
+  --gold: rgba(234, 157, 52, 1);
+  --telescope-highlight-hover: var(--gold);
+  --telescope-text-color: var(--dark);
+  --telescope-border: #888;
+}
+
+.telescopic-container {
+  --refresh-width: 12px;
+  --gap-width: 1.4px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  position: relative;
+  margin: 1rem 0;
+  gap: var(--gap-width);
+}
+.telescopic-container .expand,
+.telescopic-container .replay {
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+.telescopic-container:hover .expand,
+.telescopic-container:hover .replay {
+  visibility: visible;
+}
+
+#telescope {
+  color: var(--telescope-text-color);
+}
+#telescope div#fulltext {
+  display: none;
+}
+#telescope#telescope blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--telescope-text-color);
+  display: block;
+}
+#telescope#telescope hr {
+  border: 0.5px solid var(--telescope-text-color);
+  margin: 3px 0;
+  display: block;
+}
+#telescope .details {
+  display: inline;
+  border-radius: 3px;
+  background-color: var(--telescope-highlight);
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+#telescope .details.open {
+  background-color: transparent;
+  cursor: initial;
+}
+#telescope .details.close:hover {
+  background-color: var(--telescope-highlight-hover);
+}
+#telescope .details.open > .summary, #telescope .details.close > .expanded {
+  display: none;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL3N1cGFrb3JuL0RvY3VtZW50cy9ub3RlYm9va3MvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJfdGVsZXNjb3BpYy5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdKO0VBQ0U7RUFDQTtFQUVBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFHQTs7QUFFQTtBQUFBO0VBRUU7RUFDQTs7QUFJQTtBQUFBO0VBRUU7OztBQUtOO0VBQ0U7O0FBRUE7RUFDRTs7QUFJQTtFQUNFO0VBQ0E7RUFDQTtFQUNBOztBQUdGO0VBQ0U7RUFDQTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7QUFHRjtFQUVFIiwic291cmNlc0NvbnRlbnQiOlsiLy8gY29waWVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL2Fhcm5waG0vYWFybnBobS5naXRodWIuaW8vYmxvYi81MjcxMGJlZGExMmY0YWU0NWQ3OWQwZGE2YTcwZjBlNmY5MmFmNThiL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcy90ZWxlc2NvcGljLmlubGluZS5zY3NzXG4vLyBvbiBGZWIgNSAyMDI1XG5cbjpyb290IHtcbiAgICAtLXRlbGVzY29wZS1oaWdobGlnaHQ6ICNmY2MxNmQ1NTtcbiAgICAtLWdvbGQ6IHJnYmEoMjM0LCAxNTcsIDUyLCAxKTtcbiAgICAtLXRlbGVzY29wZS1oaWdobGlnaHQtaG92ZXI6IHZhcigtLWdvbGQpO1xuICAgIC0tdGVsZXNjb3BlLXRleHQtY29sb3I6IHZhcigtLWRhcmspO1xuICAgIC0tdGVsZXNjb3BlLWJvcmRlcjogIzg4ODtcbiAgfVxuICBcbi50ZWxlc2NvcGljLWNvbnRhaW5lciB7XG4gIC0tcmVmcmVzaC13aWR0aDogMTJweDtcbiAgLS1nYXAtd2lkdGg6IDEuNHB4O1xuXG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGFsaWduLWl0ZW1zOiBiYXNlbGluZTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXJnaW46IDFyZW0gMDtcbiAgLy8gbGVmdDogY2FsYygtMiAqICh2YXIoLS1yZWZyZXNoLXdpZHRoKSArIHZhcigtLWdhcC13aWR0aCkpKTtcbiAgLy8gd2lkdGg6IGNhbGMoMTAwJSArIDIgKiAodmFyKC0tcmVmcmVzaC13aWR0aCkgKyB2YXIoLS1nYXAtd2lkdGgpKSk7XG4gIGdhcDogdmFyKC0tZ2FwLXdpZHRoKTtcblxuICAuZXhwYW5kLFxuICAucmVwbGF5IHtcbiAgICB2aXNpYmlsaXR5OiBoaWRkZW47XG4gICAgdHJhbnNpdGlvbjogdmlzaWJpbGl0eSAwLjJzIGVhc2UtaW4tb3V0O1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgLmV4cGFuZCxcbiAgICAucmVwbGF5IHtcbiAgICAgIHZpc2liaWxpdHk6IHZpc2libGU7XG4gICAgfVxuICB9XG59XG5cbiN0ZWxlc2NvcGUge1xuICBjb2xvcjogdmFyKC0tdGVsZXNjb3BlLXRleHQtY29sb3IpO1xuXG4gIGRpdiNmdWxsdGV4dCB7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgfVxuXG4gICYjdGVsZXNjb3BlIHtcbiAgICBibG9ja3F1b3RlIHtcbiAgICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgICAgcGFkZGluZy1sZWZ0OiAxcmVtO1xuICAgICAgYm9yZGVyLWxlZnQ6IDNweCBzb2xpZCB2YXIoLS10ZWxlc2NvcGUtdGV4dC1jb2xvcik7XG4gICAgICBkaXNwbGF5OiBibG9jaztcbiAgICB9XG5cbiAgICBociB7XG4gICAgICBib3JkZXI6IDAuNXB4IHNvbGlkIHZhcigtLXRlbGVzY29wZS10ZXh0LWNvbG9yKTtcbiAgICAgIG1hcmdpbjogM3B4IDA7XG4gICAgICBkaXNwbGF5OiBibG9jaztcbiAgICB9XG4gIH1cblxuICAuZGV0YWlscyB7XG4gICAgZGlzcGxheTogaW5saW5lO1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS10ZWxlc2NvcGUtaGlnaGxpZ2h0KTtcbiAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDAuNXMgZWFzZTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG5cbiAgICAmLm9wZW4ge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gICAgICBjdXJzb3I6IGluaXRpYWw7XG4gICAgfVxuXG4gICAgJi5jbG9zZTpob3ZlciB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS10ZWxlc2NvcGUtaGlnaGxpZ2h0LWhvdmVyKTtcbiAgICB9XG5cbiAgICAmLm9wZW4gPiAuc3VtbWFyeSxcbiAgICAmLmNsb3NlID4gLmV4cGFuZGVkIHtcbiAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgfVxuICB9XG59Il19 */</style><style>article .quartz-carousel {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+article .quartz-carousel .quartz-carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+article .quartz-carousel .quartz-carousel-slides .quartz-carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article .quartz-carousel .quartz-carousel-slides .quartz-carousel-slide img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+article .quartz-carousel .quartz-carousel-slides .quartz-carousel-slide img:hover {
+  opacity: 0.9;
+}
+article .quartz-carousel .quartz-carousel-dots {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+article .quartz-carousel .quartz-carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+article .quartz-carousel .quartz-carousel-dots .dot.active {
+  background-color: #555;
+}
+article .quartz-carousel .quartz-carousel-prev,
+article .quartz-carousel .quartz-carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fac1c1;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+article .quartz-carousel .quartz-carousel-prev svg,
+article .quartz-carousel .quartz-carousel-next svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+article .quartz-carousel .quartz-carousel-prev:hover,
+article .quartz-carousel .quartz-carousel-next:hover {
+  background-color: #ddd;
+}
+article .quartz-carousel .quartz-carousel-prev {
+  left: 10px;
+}
+article .quartz-carousel .quartz-carousel-next {
+  right: 10px;
+}
+
+.carousel-image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.carousel-image-modal .carousel-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.carousel-image-modal .carousel-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-image-modal .carousel-modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.carousel-image-modal .carousel-modal-close {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 10001;
+}
+.carousel-image-modal .carousel-modal-close svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+.carousel-image-modal .carousel-modal-close:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-prev,
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-next,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-prev,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-next {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-prev svg,
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-next svg,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-prev svg,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-next svg {
+  fill: #eee;
+}
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-prev:hover,
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-next:hover,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-prev:hover,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-next:hover {
+  background-color: rgba(70, 70, 70, 0.95);
+}
+html[saved-theme=dark] article .quartz-carousel .dot,
+html[saved-theme=dark] .carousel-image-modal .dot {
+  background-color: #555;
+}
+html[saved-theme=dark] article .quartz-carousel .dot.active,
+html[saved-theme=dark] .carousel-image-modal .dot.active {
+  background-color: #ddd;
+}
+html[saved-theme=dark] article .quartz-carousel .carousel-modal-close,
+html[saved-theme=dark] .carousel-image-modal .carousel-modal-close {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+html[saved-theme=dark] article .quartz-carousel .carousel-modal-close svg,
+html[saved-theme=dark] .carousel-image-modal .carousel-modal-close svg {
+  fill: #eee;
+}
+html[saved-theme=dark] article .quartz-carousel .carousel-modal-close:hover,
+html[saved-theme=dark] .carousel-image-modal .carousel-modal-close:hover {
+  background-color: rgb(70, 70, 70);
+}
+
+@media (max-width: 768px) {
+  article .quartz-carousel .quartz-carousel-prev,
+  article .quartz-carousel .quartz-carousel-next {
+    width: 35px;
+    height: 35px;
+  }
+  article .quartz-carousel .quartz-carousel-prev svg,
+  article .quartz-carousel .quartz-carousel-next svg {
+    width: 18px;
+    height: 18px;
+  }
+  .carousel-image-modal .carousel-modal-overlay {
+    padding: 1rem;
+  }
+  .carousel-image-modal .carousel-modal-close {
+    top: -35px;
+    right: -35px;
+    width: 35px;
+    height: 35px;
+  }
+  .carousel-image-modal .carousel-modal-close svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL3N1cGFrb3JuL0RvY3VtZW50cy9ub3RlYm9va3MvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJfY2Fyb3VzZWwuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFTQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFNUjtFQUNFO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFLTjtBQUFBO0VBRUU7RUFDQTtFQUNBO0VBQ0Esa0JBL0RrQjtFQWdFbEI7RUFDQTtFQUNBLE9BL0RvQjtFQWdFcEIsUUFoRW9CO0VBaUVwQjtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0FBQUE7RUFDRTtFQUNBO0VBQ0EsTUE1RW1COztBQStFckI7QUFBQTtFQUNFLGtCQS9Fc0I7O0FBbUYxQjtFQUNFOztBQUdGO0VBQ0U7OztBQUtKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBUUo7QUFBQTtBQUFBO0FBQUE7RUFFRTs7QUFFQTtBQUFBO0FBQUE7QUFBQTtFQUNFOztBQUdGO0FBQUE7QUFBQTtBQUFBO0VBQ0U7O0FBSUo7QUFBQTtFQUNFOztBQUVBO0FBQUE7RUFDRTs7QUFJSjtBQUFBO0VBQ0U7O0FBRUE7QUFBQTtFQUNFOztBQUdGO0FBQUE7RUFDRTs7O0FBTU47RUFFSTtBQUFBO0lBRUU7SUFDQTs7RUFFQTtBQUFBO0lBQ0U7SUFDQTs7RUFNSjtJQUNFOztFQUdGO0lBQ0U7SUFDQTtJQUNBO0lBQ0E7O0VBRUE7SUFDRTtJQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZnJvbSBodHRwczovL2dpc3QuZ2l0aHViLmNvbS9waW5laS8xNDU0NWU4MWU4NjI5ZWVkNzJiNTVmY2UxY2JkNzgyMlxuLy8gMDcvMDMvMjAyNVxuXG5cbiRjYXJvdXNlbC1jb250cm9sLWJnOiAjZmFjMWMxO1xuJGNhcm91c2VsLWNvbnRyb2wtY29sb3I6ICMzMzM7XG4kY2Fyb3VzZWwtY29udHJvbC1ob3Zlci1iZzogI2RkZDtcbiRjYXJvdXNlbC1jb250cm9sLXNpemU6IDQwcHg7XG5cbmFydGljbGUgLnF1YXJ0ei1jYXJvdXNlbCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbjogMnJlbSAwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG4gIGJveC1zaGFkb3c6IDAgMnB4IDhweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG5cbiAgLnF1YXJ0ei1jYXJvdXNlbC1zbGlkZXMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuNXMgZWFzZS1pbi1vdXQ7XG5cbiAgICAucXVhcnR6LWNhcm91c2VsLXNsaWRlIHtcbiAgICAgIGZsZXg6IDAgMCAxMDAlO1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICAgICAgaW1nIHtcbiAgICAgICAgbWF4LXdpZHRoOiAxMDAlO1xuICAgICAgICBtYXgtaGVpZ2h0OiA0MDBweDtcbiAgICAgICAgb2JqZWN0LWZpdDogY29udGFpbjtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIG9wYWNpdHk6IDAuOTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtZG90cyB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi10b3A6IDFyZW07XG4gICAgcGFkZGluZzogMC41cmVtIDA7XG5cbiAgICAuZG90IHtcbiAgICAgIHdpZHRoOiAxMHB4O1xuICAgICAgaGVpZ2h0OiAxMHB4O1xuICAgICAgbWFyZ2luOiAwIDVweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDAuM3MgZWFzZTtcbiAgICAgIGN1cnNvcjogcG9pbnRlcjtcblxuICAgICAgJi5hY3RpdmUge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNTU1O1xuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtcHJldixcbiAgLnF1YXJ0ei1jYXJvdXNlbC1uZXh0IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRjYXJvdXNlbC1jb250cm9sLWJnO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgd2lkdGg6ICRjYXJvdXNlbC1jb250cm9sLXNpemU7XG4gICAgaGVpZ2h0OiAkY2Fyb3VzZWwtY29udHJvbC1zaXplO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAwLjNzIGVhc2U7XG5cbiAgICBzdmcge1xuICAgICAgd2lkdGg6IDI0cHg7XG4gICAgICBoZWlnaHQ6IDI0cHg7XG4gICAgICBmaWxsOiAkY2Fyb3VzZWwtY29udHJvbC1jb2xvcjtcbiAgICB9XG5cbiAgICAmOmhvdmVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRjYXJvdXNlbC1jb250cm9sLWhvdmVyLWJnO1xuICAgIH1cbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtcHJldiB7XG4gICAgbGVmdDogMTBweDtcbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtbmV4dCB7XG4gICAgcmlnaHQ6IDEwcHg7XG4gIH1cbn1cblxuLy8gSW1hZ2UgTW9kYWwgU3R5bGVzXG4uY2Fyb3VzZWwtaW1hZ2UtbW9kYWwge1xuICBkaXNwbGF5OiBub25lO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgei1pbmRleDogOTk5OTtcblxuICAuY2Fyb3VzZWwtbW9kYWwtb3ZlcmxheSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuOSk7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IDJyZW07XG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgfVxuXG4gIC5jYXJvdXNlbC1tb2RhbC1jb250ZW50IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgbWF4LXdpZHRoOiA5MHZ3O1xuICAgIG1heC1oZWlnaHQ6IDkwdmg7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLmNhcm91c2VsLW1vZGFsLWltYWdlIHtcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG4gICAgbWF4LWhlaWdodDogMTAwJTtcbiAgICBvYmplY3QtZml0OiBjb250YWluO1xuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgICBib3gtc2hhZG93OiAwIDRweCAyMHB4IHJnYmEoMCwgMCwgMCwgMC41KTtcbiAgfVxuXG4gIC5jYXJvdXNlbC1tb2RhbC1jbG9zZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogLTUwcHg7XG4gICAgcmlnaHQ6IC01MHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC45KTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICAgIHdpZHRoOiA0MHB4O1xuICAgIGhlaWdodDogNDBweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMC4zcyBlYXNlO1xuICAgIHotaW5kZXg6IDEwMDAxO1xuXG4gICAgc3ZnIHtcbiAgICAgIHdpZHRoOiAyNHB4O1xuICAgICAgaGVpZ2h0OiAyNHB4O1xuICAgICAgZmlsbDogIzMzMztcbiAgICB9XG5cbiAgICAmOmhvdmVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG4gICAgfVxuICB9XG59XG5cbi8vIERhcmsgbW9kZSBhZGp1c3RtZW50c1xuaHRtbFtzYXZlZC10aGVtZT1cImRhcmtcIl0gYXJ0aWNsZSAucXVhcnR6LWNhcm91c2VsLFxuaHRtbFtzYXZlZC10aGVtZT1cImRhcmtcIl0gLmNhcm91c2VsLWltYWdlLW1vZGFsIHtcbiAgLnF1YXJ0ei1jYXJvdXNlbC1wcmV2LFxuICAucXVhcnR6LWNhcm91c2VsLW5leHQge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNTAsIDUwLCA1MCwgMC44KTtcblxuICAgIHN2ZyB7XG4gICAgICBmaWxsOiAjZWVlO1xuICAgIH1cblxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg3MCwgNzAsIDcwLCAwLjk1KTtcbiAgICB9XG4gIH1cblxuICAuZG90IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNTU1O1xuXG4gICAgJi5hY3RpdmUge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICB9XG4gIH1cblxuICAuY2Fyb3VzZWwtbW9kYWwtY2xvc2Uge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNTAsIDUwLCA1MCwgMC45KTtcblxuICAgIHN2ZyB7XG4gICAgICBmaWxsOiAjZWVlO1xuICAgIH1cblxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg3MCwgNzAsIDcwLCAxKTtcbiAgICB9XG4gIH1cbn1cblxuLy8gTW9iaWxlIHJlc3BvbnNpdmVuZXNzXG5AbWVkaWEgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgYXJ0aWNsZSAucXVhcnR6LWNhcm91c2VsIHtcbiAgICAucXVhcnR6LWNhcm91c2VsLXByZXYsXG4gICAgLnF1YXJ0ei1jYXJvdXNlbC1uZXh0IHtcbiAgICAgIHdpZHRoOiAzNXB4O1xuICAgICAgaGVpZ2h0OiAzNXB4O1xuXG4gICAgICBzdmcge1xuICAgICAgICB3aWR0aDogMThweDtcbiAgICAgICAgaGVpZ2h0OiAxOHB4O1xuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5jYXJvdXNlbC1pbWFnZS1tb2RhbCB7XG4gICAgLmNhcm91c2VsLW1vZGFsLW92ZXJsYXkge1xuICAgICAgcGFkZGluZzogMXJlbTtcbiAgICB9XG5cbiAgICAuY2Fyb3VzZWwtbW9kYWwtY2xvc2Uge1xuICAgICAgdG9wOiAtMzVweDtcbiAgICAgIHJpZ2h0OiAtMzVweDtcbiAgICAgIHdpZHRoOiAzNXB4O1xuICAgICAgaGVpZ2h0OiAzNXB4O1xuXG4gICAgICBzdmcge1xuICAgICAgICB3aWR0aDogMjBweDtcbiAgICAgICAgaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL3N1cGFrb3JuL0RvY3VtZW50cy9ub3RlYm9va3MvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="./Monolithic _ Supakorn&#39;s Notebook_files/katex.min.css" rel="stylesheet" type="text/css" spa-preserve=""><style>article .quartz-carousel {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+article .quartz-carousel .quartz-carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+article .quartz-carousel .quartz-carousel-slides .quartz-carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article .quartz-carousel .quartz-carousel-slides .quartz-carousel-slide img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+article .quartz-carousel .quartz-carousel-slides .quartz-carousel-slide img:hover {
+  opacity: 0.9;
+}
+article .quartz-carousel .quartz-carousel-dots {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+article .quartz-carousel .quartz-carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+article .quartz-carousel .quartz-carousel-dots .dot.active {
+  background-color: #555;
+}
+article .quartz-carousel .quartz-carousel-prev,
+article .quartz-carousel .quartz-carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fac1c1;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+article .quartz-carousel .quartz-carousel-prev svg,
+article .quartz-carousel .quartz-carousel-next svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+article .quartz-carousel .quartz-carousel-prev:hover,
+article .quartz-carousel .quartz-carousel-next:hover {
+  background-color: #ddd;
+}
+article .quartz-carousel .quartz-carousel-prev {
+  left: 10px;
+}
+article .quartz-carousel .quartz-carousel-next {
+  right: 10px;
+}
+
+.carousel-image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.carousel-image-modal .carousel-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.carousel-image-modal .carousel-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-image-modal .carousel-modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.carousel-image-modal .carousel-modal-close {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 10001;
+}
+.carousel-image-modal .carousel-modal-close svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+.carousel-image-modal .carousel-modal-close:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-prev,
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-next,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-prev,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-next {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-prev svg,
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-next svg,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-prev svg,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-next svg {
+  fill: #eee;
+}
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-prev:hover,
+html[saved-theme=dark] article .quartz-carousel .quartz-carousel-next:hover,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-prev:hover,
+html[saved-theme=dark] .carousel-image-modal .quartz-carousel-next:hover {
+  background-color: rgba(70, 70, 70, 0.95);
+}
+html[saved-theme=dark] article .quartz-carousel .dot,
+html[saved-theme=dark] .carousel-image-modal .dot {
+  background-color: #555;
+}
+html[saved-theme=dark] article .quartz-carousel .dot.active,
+html[saved-theme=dark] .carousel-image-modal .dot.active {
+  background-color: #ddd;
+}
+html[saved-theme=dark] article .quartz-carousel .carousel-modal-close,
+html[saved-theme=dark] .carousel-image-modal .carousel-modal-close {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+html[saved-theme=dark] article .quartz-carousel .carousel-modal-close svg,
+html[saved-theme=dark] .carousel-image-modal .carousel-modal-close svg {
+  fill: #eee;
+}
+html[saved-theme=dark] article .quartz-carousel .carousel-modal-close:hover,
+html[saved-theme=dark] .carousel-image-modal .carousel-modal-close:hover {
+  background-color: rgb(70, 70, 70);
+}
+
+@media (max-width: 768px) {
+  article .quartz-carousel .quartz-carousel-prev,
+  article .quartz-carousel .quartz-carousel-next {
+    width: 35px;
+    height: 35px;
+  }
+  article .quartz-carousel .quartz-carousel-prev svg,
+  article .quartz-carousel .quartz-carousel-next svg {
+    width: 18px;
+    height: 18px;
+  }
+  .carousel-image-modal .carousel-modal-overlay {
+    padding: 1rem;
+  }
+  .carousel-image-modal .carousel-modal-close {
+    top: -35px;
+    right: -35px;
+    width: 35px;
+    height: 35px;
+  }
+  .carousel-image-modal .carousel-modal-close svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL3N1cGFrb3JuL0RvY3VtZW50cy9ub3RlYm9va3MvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJfY2Fyb3VzZWwuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFTQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFNUjtFQUNFO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFLTjtBQUFBO0VBRUU7RUFDQTtFQUNBO0VBQ0Esa0JBL0RrQjtFQWdFbEI7RUFDQTtFQUNBLE9BL0RvQjtFQWdFcEIsUUFoRW9CO0VBaUVwQjtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0FBQUE7RUFDRTtFQUNBO0VBQ0EsTUE1RW1COztBQStFckI7QUFBQTtFQUNFLGtCQS9Fc0I7O0FBbUYxQjtFQUNFOztBQUdGO0VBQ0U7OztBQUtKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBUUo7QUFBQTtBQUFBO0FBQUE7RUFFRTs7QUFFQTtBQUFBO0FBQUE7QUFBQTtFQUNFOztBQUdGO0FBQUE7QUFBQTtBQUFBO0VBQ0U7O0FBSUo7QUFBQTtFQUNFOztBQUVBO0FBQUE7RUFDRTs7QUFJSjtBQUFBO0VBQ0U7O0FBRUE7QUFBQTtFQUNFOztBQUdGO0FBQUE7RUFDRTs7O0FBTU47RUFFSTtBQUFBO0lBRUU7SUFDQTs7RUFFQTtBQUFBO0lBQ0U7SUFDQTs7RUFNSjtJQUNFOztFQUdGO0lBQ0U7SUFDQTtJQUNBO0lBQ0E7O0VBRUE7SUFDRTtJQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZnJvbSBodHRwczovL2dpc3QuZ2l0aHViLmNvbS9waW5laS8xNDU0NWU4MWU4NjI5ZWVkNzJiNTVmY2UxY2JkNzgyMlxuLy8gMDcvMDMvMjAyNVxuXG5cbiRjYXJvdXNlbC1jb250cm9sLWJnOiAjZmFjMWMxO1xuJGNhcm91c2VsLWNvbnRyb2wtY29sb3I6ICMzMzM7XG4kY2Fyb3VzZWwtY29udHJvbC1ob3Zlci1iZzogI2RkZDtcbiRjYXJvdXNlbC1jb250cm9sLXNpemU6IDQwcHg7XG5cbmFydGljbGUgLnF1YXJ0ei1jYXJvdXNlbCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbjogMnJlbSAwO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG4gIGJveC1zaGFkb3c6IDAgMnB4IDhweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG5cbiAgLnF1YXJ0ei1jYXJvdXNlbC1zbGlkZXMge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuNXMgZWFzZS1pbi1vdXQ7XG5cbiAgICAucXVhcnR6LWNhcm91c2VsLXNsaWRlIHtcbiAgICAgIGZsZXg6IDAgMCAxMDAlO1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICAgICAgaW1nIHtcbiAgICAgICAgbWF4LXdpZHRoOiAxMDAlO1xuICAgICAgICBtYXgtaGVpZ2h0OiA0MDBweDtcbiAgICAgICAgb2JqZWN0LWZpdDogY29udGFpbjtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIG9wYWNpdHk6IDAuOTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtZG90cyB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi10b3A6IDFyZW07XG4gICAgcGFkZGluZzogMC41cmVtIDA7XG5cbiAgICAuZG90IHtcbiAgICAgIHdpZHRoOiAxMHB4O1xuICAgICAgaGVpZ2h0OiAxMHB4O1xuICAgICAgbWFyZ2luOiAwIDVweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gICAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDAuM3MgZWFzZTtcbiAgICAgIGN1cnNvcjogcG9pbnRlcjtcblxuICAgICAgJi5hY3RpdmUge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNTU1O1xuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtcHJldixcbiAgLnF1YXJ0ei1jYXJvdXNlbC1uZXh0IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRjYXJvdXNlbC1jb250cm9sLWJnO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgd2lkdGg6ICRjYXJvdXNlbC1jb250cm9sLXNpemU7XG4gICAgaGVpZ2h0OiAkY2Fyb3VzZWwtY29udHJvbC1zaXplO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAwLjNzIGVhc2U7XG5cbiAgICBzdmcge1xuICAgICAgd2lkdGg6IDI0cHg7XG4gICAgICBoZWlnaHQ6IDI0cHg7XG4gICAgICBmaWxsOiAkY2Fyb3VzZWwtY29udHJvbC1jb2xvcjtcbiAgICB9XG5cbiAgICAmOmhvdmVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRjYXJvdXNlbC1jb250cm9sLWhvdmVyLWJnO1xuICAgIH1cbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtcHJldiB7XG4gICAgbGVmdDogMTBweDtcbiAgfVxuXG4gIC5xdWFydHotY2Fyb3VzZWwtbmV4dCB7XG4gICAgcmlnaHQ6IDEwcHg7XG4gIH1cbn1cblxuLy8gSW1hZ2UgTW9kYWwgU3R5bGVzXG4uY2Fyb3VzZWwtaW1hZ2UtbW9kYWwge1xuICBkaXNwbGF5OiBub25lO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgei1pbmRleDogOTk5OTtcblxuICAuY2Fyb3VzZWwtbW9kYWwtb3ZlcmxheSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuOSk7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHBhZGRpbmc6IDJyZW07XG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgfVxuXG4gIC5jYXJvdXNlbC1tb2RhbC1jb250ZW50IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgbWF4LXdpZHRoOiA5MHZ3O1xuICAgIG1heC1oZWlnaHQ6IDkwdmg7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLmNhcm91c2VsLW1vZGFsLWltYWdlIHtcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG4gICAgbWF4LWhlaWdodDogMTAwJTtcbiAgICBvYmplY3QtZml0OiBjb250YWluO1xuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgICBib3gtc2hhZG93OiAwIDRweCAyMHB4IHJnYmEoMCwgMCwgMCwgMC41KTtcbiAgfVxuXG4gIC5jYXJvdXNlbC1tb2RhbC1jbG9zZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogLTUwcHg7XG4gICAgcmlnaHQ6IC01MHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC45KTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICAgIHdpZHRoOiA0MHB4O1xuICAgIGhlaWdodDogNDBweDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMC4zcyBlYXNlO1xuICAgIHotaW5kZXg6IDEwMDAxO1xuXG4gICAgc3ZnIHtcbiAgICAgIHdpZHRoOiAyNHB4O1xuICAgICAgaGVpZ2h0OiAyNHB4O1xuICAgICAgZmlsbDogIzMzMztcbiAgICB9XG5cbiAgICAmOmhvdmVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG4gICAgfVxuICB9XG59XG5cbi8vIERhcmsgbW9kZSBhZGp1c3RtZW50c1xuaHRtbFtzYXZlZC10aGVtZT1cImRhcmtcIl0gYXJ0aWNsZSAucXVhcnR6LWNhcm91c2VsLFxuaHRtbFtzYXZlZC10aGVtZT1cImRhcmtcIl0gLmNhcm91c2VsLWltYWdlLW1vZGFsIHtcbiAgLnF1YXJ0ei1jYXJvdXNlbC1wcmV2LFxuICAucXVhcnR6LWNhcm91c2VsLW5leHQge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNTAsIDUwLCA1MCwgMC44KTtcblxuICAgIHN2ZyB7XG4gICAgICBmaWxsOiAjZWVlO1xuICAgIH1cblxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg3MCwgNzAsIDcwLCAwLjk1KTtcbiAgICB9XG4gIH1cblxuICAuZG90IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNTU1O1xuXG4gICAgJi5hY3RpdmUge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICB9XG4gIH1cblxuICAuY2Fyb3VzZWwtbW9kYWwtY2xvc2Uge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoNTAsIDUwLCA1MCwgMC45KTtcblxuICAgIHN2ZyB7XG4gICAgICBmaWxsOiAjZWVlO1xuICAgIH1cblxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg3MCwgNzAsIDcwLCAxKTtcbiAgICB9XG4gIH1cbn1cblxuLy8gTW9iaWxlIHJlc3BvbnNpdmVuZXNzXG5AbWVkaWEgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgYXJ0aWNsZSAucXVhcnR6LWNhcm91c2VsIHtcbiAgICAucXVhcnR6LWNhcm91c2VsLXByZXYsXG4gICAgLnF1YXJ0ei1jYXJvdXNlbC1uZXh0IHtcbiAgICAgIHdpZHRoOiAzNXB4O1xuICAgICAgaGVpZ2h0OiAzNXB4O1xuXG4gICAgICBzdmcge1xuICAgICAgICB3aWR0aDogMThweDtcbiAgICAgICAgaGVpZ2h0OiAxOHB4O1xuICAgICAgfVxuICAgIH1cbiAgfVxuXG4gIC5jYXJvdXNlbC1pbWFnZS1tb2RhbCB7XG4gICAgLmNhcm91c2VsLW1vZGFsLW92ZXJsYXkge1xuICAgICAgcGFkZGluZzogMXJlbTtcbiAgICB9XG5cbiAgICAuY2Fyb3VzZWwtbW9kYWwtY2xvc2Uge1xuICAgICAgdG9wOiAtMzVweDtcbiAgICAgIHJpZ2h0OiAtMzVweDtcbiAgICAgIHdpZHRoOiAzNXB4O1xuICAgICAgaGVpZ2h0OiAzNXB4O1xuXG4gICAgICBzdmcge1xuICAgICAgICB3aWR0aDogMjBweDtcbiAgICAgICAgaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><script src="./Monolithic _ Supakorn&#39;s Notebook_files/prescript.js" type="application/javascript" spa-preserve=""></script><script type="application/javascript" spa-preserve="">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://supakorn.info/index.xml"><link rel="alternate" type="application/rss+xml" title="RSS Feed by Creation Time" href="https://supakorn.info/index-created.xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image" content="https://supakorn.info/design/Monolithic-og-image.webp"><meta property="og:image:url" content="https://supakorn.info/design/Monolithic-og-image.webp"><meta name="twitter:image" content="https://supakorn.info/design/Monolithic-og-image.webp"><meta property="og:image:type" content="image/.webp"><script src="./Monolithic _ Supakorn&#39;s Notebook_files/count.js" async="" data-goatcounter="https://GOATCOUNTER_CODE_PLACEHOLDER.goatcounter.com/count"></script></head><body data-slug="design/Monolithic" cz-shortcut-listen="true"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="overlay-explorer mobile-only"><button type="button" id="overlay-explorer-button" aria-controls="overlay-explorer-content" data-olsavestate="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 6 18 6"></polyline><polyline points="6 12 18 12"></polyline><polyline points="6 18 18 18"></polyline></svg></button><div id="overlay-explorer-container"><div id="overlay-explorer-space"><div id="overlay-explorer-content"><ul id="overlay-explorer-ul"><li><div data-ol-children-for="" class="ol-folder-outer open"><ul style="padding-left:0;"><li><div data-ol-selector-for="blog" class="ol-folder-entry"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ol-folder-icon false"><polyline points="6 9 12 15 18 9"></polyline></svg><button class="ol-folder-button"><span class="ol-folder-title">blog</span></button><a href="http://localhost:8080/blog/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 4 21 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="0 9 18 9"></polyline><polyline points="0 15 18 15"></polyline><polyline points="15 6 21 12 15 18"></polyline></svg></a></div><div data-ol-children-for="blog" class="ol-folder-outer false"><ul style="padding-left:1.4rem;"><li><a href="http://localhost:8080/blog/WebAssembly-with-Zig-(TH)">✦ WebAssembly with Zig (TH)</a></li><li><a href="http://localhost:8080/blog/WebDevelopment-with-HTMX-(TH)">✦ WebDevelopment with HTMX (TH)</a></li></ul></div></li><li><div data-ol-selector-for="braindump" class="ol-folder-entry"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ol-folder-icon false"><polyline points="6 9 12 15 18 9"></polyline></svg><button class="ol-folder-button"><span class="ol-folder-title">braindump</span></button><a href="http://localhost:8080/braindump/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 4 21 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="0 9 18 9"></polyline><polyline points="0 15 18 15"></polyline><polyline points="15 6 21 12 15 18"></polyline></svg></a></div><div data-ol-children-for="braindump" class="ol-folder-outer false"><ul style="padding-left:1.4rem;"><li><a href="http://localhost:8080/braindump/INT134-exam-preparation">✦ INT134 exam preparation</a></li></ul></div></li><li><div data-ol-selector-for="coding" class="ol-folder-entry"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ol-folder-icon false"><polyline points="6 9 12 15 18 9"></polyline></svg><button class="ol-folder-button"><span class="ol-folder-title">coding</span></button><a href="http://localhost:8080/coding/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 4 21 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="0 9 18 9"></polyline><polyline points="0 15 18 15"></polyline><polyline points="15 6 21 12 15 18"></polyline></svg></a></div><div data-ol-children-for="coding" class="ol-folder-outer false"><ul style="padding-left:1.4rem;"><li><a href="http://localhost:8080/coding/go">✦ go</a></li></ul></div></li><li><div data-ol-selector-for="ctf" class="ol-folder-entry"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ol-folder-icon false"><polyline points="6 9 12 15 18 9"></polyline></svg><button class="ol-folder-button"><span class="ol-folder-title">ctf</span></button><a href="http://localhost:8080/ctf/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 4 21 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="0 9 18 9"></polyline><polyline points="0 15 18 15"></polyline><polyline points="15 6 21 12 15 18"></polyline></svg></a></div><div data-ol-children-for="ctf" class="ol-folder-outer false"><ul style="padding-left:1.4rem;"><li><a href="http://localhost:8080/ctf/STH-Mini-Web-CTF-2025-(TH)">✦ STH-Mini-Web-CTF-2025 (TH)</a></li></ul></div></li><li><div data-ol-selector-for="design" class="ol-folder-entry"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ol-folder-icon false"><polyline points="6 9 12 15 18 9"></polyline></svg><button class="ol-folder-button"><span class="ol-folder-title">design</span></button><a href="http://localhost:8080/design/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 4 21 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="0 9 18 9"></polyline><polyline points="0 15 18 15"></polyline><polyline points="15 6 21 12 15 18"></polyline></svg></a></div><div data-ol-children-for="design" class="ol-folder-outer false"><ul style="padding-left:1.4rem;"><li><a href="http://localhost:8080/design/big-ball-of-mud">✦ big ball of mud</a></li><li><a href="http://localhost:8080/design/Domain-Driven-Design(DDD)">✦ Domain Driven Design(DDD)</a></li><li><a href="http://localhost:8080/design/Microservices">✦ Microservices</a></li><li><a href="http://localhost:8080/design/Monolithic">✦ Monolithic</a></li></ul></div></li><li><div data-ol-children-for="" class="ol-folder-outer false"><ul style="padding-left:0;"></ul></div></li><li><a href="http://localhost:8080/cache">✦ cache</a></li></ul></div></li></ul></div></div></div></div><h2 class="page-title"><a href="http://localhost:8080/">supakorn.info</a></h2><div class="spacer mobile-only"></div><div class="forced-row "><div class="map"><a href="http://localhost:8080/tags/" class="toggle" tabindex="-1"><label for="darkmode-toggle" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 100 100" xml:space="preserve"><title>Map</title><path d="M9 20L3 17V4L9 7M9 20L15 17M9 20V7M15 17L21 20V7L15 4M15 17V4M9 7L15 4" stroke="var(--darkgray)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></label></a></div><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"><div class="search-layout" data-preview="true"><div class="results-container"></div><div class="preview-container"></div></div></div></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="http://localhost:8080/design/Monolithic#characteristics" data-for="characteristics" class="in-view">✦ Characteristics</a></li><li class="depth-0"><a href="http://localhost:8080/design/Monolithic#advantages" data-for="advantages" class="in-view">✦ Advantages</a></li><li class="depth-0"><a href="http://localhost:8080/design/Monolithic#disadvantages" data-for="disadvantages" class="in-view">✦ Disadvantages</a></li><li class="overflow-end"></li></ul></div><div class="floating-buttons floating-right"><div class="button-group"><button class="floating-button" title="Scroll to top" data-action="scrollTop"><span class="floating-button-tooltip">Scroll to top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg></button><button class="floating-button" title="Scroll to bottom" data-action="scrollBottom"><span class="floating-button-tooltip">Scroll to bottom</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button><button class="floating-button" title="graph" data-action="graph"><span class="floating-button-tooltip">Graph</span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button><button class="floating-button" title="Random page floating button" data-action="randomPgFloating"><span class="floating-button-tooltip">Random page</span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 7H4.77985C6.93172 7 8.00766 7 8.87921 7.45631C9.25172 7.65134 9.59114 7.90388 9.88499 8.20464C10.5725 8.90832 10.8817 9.93888 11.5 12V12C12.1183 14.0611 12.4275 15.0917 13.115 15.7954C13.4089 16.0961 13.7483 16.3487 14.1208 16.5437C14.9923 17 16.0683 17 18.2202 17H21M21 17L18 14M21 17L18 20" stroke="currentColor"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3536 6.64648L18.3536 3.64648L17.6464 4.35359L19.7929 6.50004H18.2202H18.1963C17.1406 6.50003 16.3153 6.50003 15.6464 6.55901C14.964 6.61918 14.405 6.74317 13.8889 7.01339C13.4698 7.2328 13.0879 7.51691 12.7574 7.85526C12.7386 7.87444 12.7202 7.8938 12.7019 7.91335C12.8289 8.16228 12.9399 8.41464 13.0406 8.66741C13.0782 8.7617 13.1154 8.85879 13.1523 8.95851C13.2519 8.80434 13.3571 8.6724 13.4727 8.5541C13.7298 8.29094 14.0268 8.06996 14.3527 7.89931C14.7081 7.71321 15.1228 7.60905 15.7343 7.55514C16.3542 7.50049 17.1355 7.50004 18.2202 7.50004H19.7929L17.6464 9.64648L18.3536 10.3536L21.3536 7.35359L21.7071 7.00004L21.3536 6.64648ZM10.2981 16.0867C10.1711 15.8378 10.0601 15.5854 9.95935 15.3327C9.92175 15.2384 9.88456 15.1413 9.84766 15.0416C9.74807 15.1957 9.64293 15.3277 9.52735 15.446C9.27024 15.7091 8.97324 15.9301 8.6473 16.1008C8.29185 16.2869 7.87716 16.391 7.26574 16.4449C6.64583 16.4996 5.86454 16.5 4.77985 16.5H3V17.5H4.77985H4.80369C5.85944 17.5 6.68467 17.5 7.35357 17.4411C8.03597 17.3809 8.59502 17.2569 9.11113 16.9867C9.5302 16.7673 9.91205 16.4832 10.2426 16.1448C10.2614 16.1256 10.2798 16.1063 10.2981 16.0867Z" fill="currentColor"></path> </g></svg></button></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="http://localhost:8080/">🪴</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="http://localhost:8080/design/">design</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="http://localhost:8080/design/Monolithic">Monolithic</a></div></nav><h1 class="article-title">Monolithic</h1><div class="contentmeta-container"><p style="margin:0;padding:0;" class="content-meta"><a class="light-a" href="https://github.com/Supakornn/notebook/blob/v4/content/design/Monolithic.md">ᨒ Source ᨒ</a><a class="light-a" href="https://github.com/Supakornn/notebook/blame/v4/content/design/Monolithic.md">↟ Blame ᨒ</a><a class="light-a" href="https://github.githistory.xyz/Supakornn/notebook/commits/v4/content/design/Monolithic.md">↟ GitHistory ↟</a></p><p show-comma="true" style="margin:0;padding:0;" class="content-meta">Created: <time datetime="2025-09-25T17:05:00.024Z">Sep 26, 2025</time>Modified: <time datetime="2025-09-26T22:59:24.000Z">Sep 27, 2025</time><span>1 min read</span></p></div><ul class="tags"><li><a href="http://localhost:8080/tags/software-architecture" class="internal tag-link">software-architecture</a></li></ul><div class="toc mobile-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow gradient-active" id="list-0"><li class="depth-0"><a href="http://localhost:8080/design/Monolithic#characteristics" data-for="characteristics" class="in-view">✦ Characteristics</a></li><li class="depth-0"><a href="http://localhost:8080/design/Monolithic#advantages" data-for="advantages" class="in-view">✦ Advantages</a></li><li class="depth-0"><a href="http://localhost:8080/design/Monolithic#disadvantages" data-for="disadvantages" class="in-view">✦ Disadvantages</a></li><li class="overflow-end"></li></ul></div></div></div><article class="popover-hint"><p class="page-sparkle-divider">───✦✰✦✧✦✰✦✧✦✰✦✧✦✰✦✧✦✰✦✧───</p><p><img src="./Monolithic _ Supakorn&#39;s Notebook_files/Pasted-image-20250927051052.png" width="auto" height="auto" alt=""></p>
+<p>A <strong>monolithic architecture</strong> is a traditional model of software development where the entire application is built as a single codebase. All components are tightly coupled and deployed together.</p>
+<h3 id="characteristics">Characteristics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="http://localhost:8080/design/Monolithic#characteristics" class="internal"><span class="indicator-hook"></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Simple to develop, test, and deploy in early stages</li>
+<li>Single codebase and deployment artifact</li>
+<li>Shared memory space and database</li>
+</ul>
+<h3 id="advantages">Advantages<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="http://localhost:8080/design/Monolithic#advantages" class="internal"><span class="indicator-hook"></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Easier debugging and testing (everything runs in one process)</li>
+<li>Lower operational complexity for small teams</li>
+<li>Faster initial development velocity</li>
+</ul>
+<h3 id="disadvantages">Disadvantages<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="http://localhost:8080/design/Monolithic#disadvantages" class="internal"><span class="indicator-hook"></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Hard to scale individual components</li>
+<li>Risk of “<a href="http://localhost:8080/design/big-ball-of-mud" class="internal alias" data-slug="design/big-ball-of-mud"><span class="indicator-hook"></span>big ball of mud</a>” as codebase grows</li>
+<li>Any change requires full redeployment</li>
+<li>Technology stack is locked across the entire app</li>
+</ul><p class="page-sparkle-divider">───✦✰✦✧✦✰✦✧✦✰✦✧✦✰✦✧✦✰✦✧───</p></article><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[&quot;graph-exclude&quot;,&quot;explorer-exclude&quot;,&quot;backlinks-exclude&quot;,&quot;recents-exclude&quot;,&quot;search-exclude&quot;,&quot;listing-exclude&quot;],&quot;focusOnHover&quot;:false,&quot;excludeTags&quot;:[&quot;graph-exclude&quot;],&quot;enableRadial&quot;:false}"><canvas width="234" height="250" style="width: 234px; height: 250px; touch-action: none; cursor: inherit;"></canvas></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[&quot;graph-exclude&quot;,&quot;explorer-exclude&quot;,&quot;backlinks-exclude&quot;,&quot;recents-exclude&quot;,&quot;search-exclude&quot;,&quot;listing-exclude&quot;],&quot;focusOnHover&quot;:true,&quot;excludeTags&quot;:[&quot;graph-exclude&quot;],&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-3" class="overflow"><li>No backlinks found</li><li class="overflow-end"></li></ul></div></div><footer class=" footer"><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/supakornn/notebook">Repo</a></li></ul><div style="display:flex;justify-content:space-between;align-items:center;width:100%;"><ul><li><a href="http://localhost:8080/design/Monolithic#">Scroll to top ↑</a></li><li><a id="random-page-button">Random Page 🎲</a></li></ul><div style="display:flex;align-items:center;gap:1rem;"><a href="https://webring.wonderful.software/#supakorn.info" title="วงแหวนเว็บ"><img alt="วงแหวนเว็บ" width="24" height="24" src="./Monolithic _ Supakorn&#39;s Notebook_files/webring.svg"></a></div></div></footer></div></div><script type="module">
+// minified https://github.com/yuanqing/charming
+// const c=function(e,{tagName:t="span",split:n,setClassName:r=function(e){return"char"+e}}={}){e.normalize();let i=1;function o(e){let o=e.parentNode,a=e.nodeValue,l=n?n(a):a.split("");l.forEach(function(n){let a=document.createElement(t),l=r(i++,n);l&&(a.className=l),a.appendChild(document.createTextNode(n)),a.setAttribute("aria-hidden","true"),o.insertBefore(a,e)}),""!==a.trim()&&o.setAttribute("aria-label",a),o.removeChild(e)}!function e(t){if(3===t.nodeType)return o(t);let n=Array.prototype.slice.call(t.childNodes),r=n.length;if(1===r&&3===n[0].nodeType)return o(n[0]);n.forEach(function(t){e(t)})}(e)};
+const c=function(e,{tagName:t="span",split:n,setClassName:r=function(e){return"char"+e}}={}){e.normalize();let i=1;function o(e){let o=e.parentNode,a=e.nodeValue,l=n?n(a):a.split("");l.forEach(function(n){let a=document.createElement(t),l=r(i++,n);l&&(a.className=l),a.appendChild(document.createTextNode(n)),a.setAttribute("aria-hidden","true"),o.insertBefore(a,e)}),o.setAttribute("aria-label",a),o.removeChild(e)}!function e(t){if(3===t.nodeType)return o(t);let n=Array.prototype.slice.call(t.childNodes),r=n.length;if(1===r&&3===n[0].nodeType)return o(n[0]);n.forEach(function(t){e(t)})}(e)};
+document.querySelectorAll('.ft-letters:not(.ft-letters .ft-letters)').forEach((e)=>c(e,{setClassName:()=>'char'}))
+</script><script type="application/javascript">document.addEventListener("nav",()=>{let s=document.querySelectorAll(".telescopic-container");s.length!==0&&s.forEach(c=>{let o=c.querySelector("div#telescope");if(!o)return;let l=o.querySelectorAll('span[class~="details"]');l.forEach(e=>{function t(){e.classList.remove("close"),e.classList.add("open")}e.addEventListener("click",t),window.addCleanup(()=>e.removeEventListener("click",t))}),c.querySelectorAll(".replay").forEach(e=>{function t(){l.forEach(n=>{n.classList.toggle("close",!0),n.classList.toggle("open",!1)})}e.addEventListener("click",t),window.addCleanup(()=>e.removeEventListener("click",t))}),c.querySelectorAll(".expand").forEach(e=>{function t(){l.forEach(n=>{n.classList.toggle("close",!1),n.classList.toggle("open",!0)})}e.addEventListener("click",t),window.addCleanup(()=>e.removeEventListener("click",t))})})});
+</script><script type="module">function t(){document.querySelectorAll(".spoiler-text").forEach(e=>{function n(){e.classList.toggle("revealed")}e.addEventListener("click",n),window.addCleanup(()=>e.removeEventListener("click",n))})}document.addEventListener("nav",t);
+</script><script type="application/javascript">var v=new WeakSet;document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector("article")||document.querySelector("#quartz-body .center")||document.body;p(e),w(e),window.initCarousel=h});function p(e){e.querySelectorAll('.quartz-carousel[data-needs-init="true"]').forEach(h)}function w(e){let t=null;new MutationObserver(r=>{r.some(u=>Array.from(u.addedNodes).some(n=>{if(n.nodeType!==Node.ELEMENT_NODE)return!1;let c=n;return c.classList?.contains("quartz-carousel")&&c.getAttribute("data-needs-init")==="true"?!0:c.querySelectorAll?.('.quartz-carousel[data-needs-init="true"]').length>0}))&&(t&&clearTimeout(t),t=window.setTimeout(()=>p(e),50))}).observe(e,{childList:!0,subtree:!0})}function M(){let e=document.createElement("div");return e.className="carousel-image-modal",e.innerHTML=`
+    <div class="carousel-modal-overlay">
+      <div class="carousel-modal-content">
+        <button class="carousel-modal-close" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+        <img class="carousel-modal-image" src="" alt="" />
+      </div>
+    </div>
+  `,document.body.appendChild(e),e}function q(e){let t=document.querySelector(".carousel-image-modal");t||(t=M());let l=t.querySelector(".carousel-modal-image"),r=t.querySelector(".carousel-modal-close"),m=t.querySelector(".carousel-modal-overlay");l.src=e.src,l.alt=e.alt,t.style.display="flex",document.body.style.overflow="hidden";let u=()=>{t.style.display="none",document.body.style.overflow=""};r.onclick=null,m.onclick=null,r.onclick=u,m.onclick=c=>{c.target===m&&u()};let n=c=>{c.key==="Escape"&&(u(),document.removeEventListener("keydown",n))};document.addEventListener("keydown",n)}function h(e){if(v.has(e)||e.getAttribute("data-needs-init")!=="true")return null;v.add(e),e.removeAttribute("data-needs-init");let t=e.querySelector(".quartz-carousel-slides");if(!t)return null;let l=t.querySelectorAll(".quartz-carousel-slide"),r=e.querySelector(".quartz-carousel-dots"),m=e.querySelector(".quartz-carousel-prev"),u=e.querySelector(".quartz-carousel-next"),n=0;if(l.length<=1)return c(),y(),f();g(),L(),b(),T(),y(),d(0);function c(){m?.style.setProperty("display","none"),u?.style.setProperty("display","none"),r?.style.setProperty("display","none")}function y(){l.forEach(o=>{let a=o.querySelector("img");a&&(a.style.cursor="pointer",a.addEventListener("click",s=>{s.stopPropagation(),q(a)},{passive:!0}))})}function g(){if(!r)return;let o=document.createDocumentFragment();l.forEach((a,s)=>{let i=document.createElement("span");i.className=s===0?"dot active":"dot",i.addEventListener("click",()=>d(s),{passive:!0}),o.appendChild(i)}),r.innerHTML="",r.appendChild(o)}function L(){let o=s=>{s.preventDefault(),d(n-1)},a=s=>{s.preventDefault(),d(n+1)};m?.addEventListener("click",o,{passive:!1}),u?.addEventListener("click",a,{passive:!1})}function b(){e.setAttribute("tabindex","0"),e.addEventListener("keydown",o=>{switch(o.key){case"ArrowLeft":o.preventDefault(),d(n-1);break;case"ArrowRight":o.preventDefault(),d(n+1);break}},{passive:!1})}function T(){let o=0,a=0;e.addEventListener("touchstart",i=>{o=i.changedTouches[0].screenX},{passive:!0}),e.addEventListener("touchend",i=>{a=i.changedTouches[0].screenX,s()},{passive:!0});function s(){let E=a-o;Math.abs(E)<50||(E<0?d(n+1):d(n-1))}}function d(o){n=(o%l.length+l.length)%l.length,t&&(t.style.transform=`translateX(-${n*100}%)`),r&&r.querySelectorAll(".dot").forEach((s,i)=>{s.classList.toggle("active",i===n)})}function f(){return{currentIndex:n,goToSlide:d,destroy:()=>{v.delete(e),e.setAttribute("data-needs-init","true")}}}return f()}
+</script><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="./Monolithic _ Supakorn&#39;s Notebook_files/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">var v=new WeakSet;document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector("article")||document.querySelector("#quartz-body .center")||document.body;p(e),w(e),window.initCarousel=h});function p(e){e.querySelectorAll('.quartz-carousel[data-needs-init="true"]').forEach(h)}function w(e){let t=null;new MutationObserver(r=>{r.some(u=>Array.from(u.addedNodes).some(n=>{if(n.nodeType!==Node.ELEMENT_NODE)return!1;let c=n;return c.classList?.contains("quartz-carousel")&&c.getAttribute("data-needs-init")==="true"?!0:c.querySelectorAll?.('.quartz-carousel[data-needs-init="true"]').length>0}))&&(t&&clearTimeout(t),t=window.setTimeout(()=>p(e),50))}).observe(e,{childList:!0,subtree:!0})}function M(){let e=document.createElement("div");return e.className="carousel-image-modal",e.innerHTML=`
+    <div class="carousel-modal-overlay">
+      <div class="carousel-modal-content">
+        <button class="carousel-modal-close" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+        <img class="carousel-modal-image" src="" alt="" />
+      </div>
+    </div>
+  `,document.body.appendChild(e),e}function q(e){let t=document.querySelector(".carousel-image-modal");t||(t=M());let l=t.querySelector(".carousel-modal-image"),r=t.querySelector(".carousel-modal-close"),m=t.querySelector(".carousel-modal-overlay");l.src=e.src,l.alt=e.alt,t.style.display="flex",document.body.style.overflow="hidden";let u=()=>{t.style.display="none",document.body.style.overflow=""};r.onclick=null,m.onclick=null,r.onclick=u,m.onclick=c=>{c.target===m&&u()};let n=c=>{c.key==="Escape"&&(u(),document.removeEventListener("keydown",n))};document.addEventListener("keydown",n)}function h(e){if(v.has(e)||e.getAttribute("data-needs-init")!=="true")return null;v.add(e),e.removeAttribute("data-needs-init");let t=e.querySelector(".quartz-carousel-slides");if(!t)return null;let l=t.querySelectorAll(".quartz-carousel-slide"),r=e.querySelector(".quartz-carousel-dots"),m=e.querySelector(".quartz-carousel-prev"),u=e.querySelector(".quartz-carousel-next"),n=0;if(l.length<=1)return c(),y(),f();g(),L(),b(),T(),y(),d(0);function c(){m?.style.setProperty("display","none"),u?.style.setProperty("display","none"),r?.style.setProperty("display","none")}function y(){l.forEach(o=>{let a=o.querySelector("img");a&&(a.style.cursor="pointer",a.addEventListener("click",s=>{s.stopPropagation(),q(a)},{passive:!0}))})}function g(){if(!r)return;let o=document.createDocumentFragment();l.forEach((a,s)=>{let i=document.createElement("span");i.className=s===0?"dot active":"dot",i.addEventListener("click",()=>d(s),{passive:!0}),o.appendChild(i)}),r.innerHTML="",r.appendChild(o)}function L(){let o=s=>{s.preventDefault(),d(n-1)},a=s=>{s.preventDefault(),d(n+1)};m?.addEventListener("click",o,{passive:!1}),u?.addEventListener("click",a,{passive:!1})}function b(){e.setAttribute("tabindex","0"),e.addEventListener("keydown",o=>{switch(o.key){case"ArrowLeft":o.preventDefault(),d(n-1);break;case"ArrowRight":o.preventDefault(),d(n+1);break}},{passive:!1})}function T(){let o=0,a=0;e.addEventListener("touchstart",i=>{o=i.changedTouches[0].screenX},{passive:!0}),e.addEventListener("touchend",i=>{a=i.changedTouches[0].screenX,s()},{passive:!0});function s(){let E=a-o;Math.abs(E)<50||(E<0?d(n+1):d(n-1))}}function d(o){n=(o%l.length+l.length)%l.length,t&&(t.style.transform=`translateX(-${n*100}%)`),r&&r.querySelectorAll(".dot").forEach((s,i)=>{s.classList.toggle("active",i===n)})}function f(){return{currentIndex:n,goToSlide:d,destroy:()=>{v.delete(e),e.setAttribute("data-needs-init","true")}}}return f()}
+</script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="./Monolithic _ Supakorn&#39;s Notebook_files/postscript.js" type="module"></script><protonpass-root-e9a1 data-protonpass-role="root" data-protonpass-theme="dark"><template shadowrootmode="closed"></template></protonpass-root-e9a1></body></html>
