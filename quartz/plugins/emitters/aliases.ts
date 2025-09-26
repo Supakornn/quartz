@@ -43,7 +43,7 @@ export const AliasRedirects: QuartzEmitterPlugin = () => ({
       // const aliases = file.data.frontmatter?.aliases ?? []
       // const permalink = file.data.frontmatter?.permalink
       // const slugs = getAliasSlugs(aliases, argv, file)
-      
+
       // if (permalink) {
       //   slugs.push(permalink as FullSlug)
       // }
