@@ -15,18 +15,17 @@ I'm a student at [sit,kmutt](https://sit.kmutt.ac.th/) who loves tinkering with 
 
 This website is my way of learning in public - sharing what I discover along the way. If something I wrote helps you or if you want to chat about any topic here, that would make me really happy!
 
-> [!Links]
-> 
 >[GitHub:](https://github.com/Supakornn)
 [Twitter:](https://twitter.com/supak0rnn)
 [LinkedIn:](https://linkedin.com/in/supakornieamgomol)
 [Instagram:](https://instagram.com/supakornigm)
 [Facebook:](https://facebook.com/spkngap)
-[Resume:](https://resume.supakorn.info)**
-
+[Resume:](https://resume.supakorn.info)
 
 #### How this works
 
 This site is built with [Quartz](https://quartz.jzhao.xyz/) and all my notes are connected. You can click on the links to jump between topics, or just browse around and see what catches your eye.
 
-Everything here is a work in progress. I update things as I learn more, so don't be surprised if you see changes. That's just how gardens grow! 🌱
+> [!notes]
+> Everything here is a work in progress. I update things as I learn more, so don't be surprised if you see changes. That's just how gardens grow! 🌱
+
