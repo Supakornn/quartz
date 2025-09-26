@@ -23,3 +23,9 @@ tags:
 - Code can become messy (“[[Big Ball Of Mud]]”)
 - Any change needs full redeploy
 - Technology stack is locked for the whole app
+
+### See also
+
+- [[Microservices]]
+- [[RESTful]]
+- [[Big Ball Of Mud]]

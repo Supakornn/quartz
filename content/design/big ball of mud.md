@@ -31,3 +31,8 @@ tags:
 - Use simple design patterns and architecture rules
 - Refactor code regularly
 - Write tests and update documentation
+
+### See also
+
+- [[Monolithic]]
+- [[Microservices]]
