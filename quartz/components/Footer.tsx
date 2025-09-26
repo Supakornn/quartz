@@ -27,7 +27,11 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
-        <li></li>
+        <li>
+          <a href="#">
+            Webring <img src="/webring.svg" alt="Webring" />
+          </a>
+        </li>
         <p></p>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <ul>
