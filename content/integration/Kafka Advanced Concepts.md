@@ -3,7 +3,7 @@ tags:
   - kafka
 ---
 
-### 1. KRaft (Kafka Raft)
+### 1. K[Raft (Kafka Raft)
 
 - New Kafka mode **without Zookeeper**
 - Uses **internal Raft quorum** to manage metadata
