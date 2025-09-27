@@ -11,7 +11,6 @@ tags:
 - Can handle lots of messages and scale easily
 - Helps decouple services (services don’t need to know each other)
     
-
 ### Advantages
 
 - Services are loosely coupled → easier to maintain
@@ -19,7 +18,6 @@ tags:
 - Good for async tasks and background jobs
 - Helps with scaling large systems
     
-
 ### Disadvantages
 
 - More complex to set up and monitor
@@ -27,17 +25,13 @@ tags:
 - Need extra components (broker, queue, etc.)
 - Some latency compared to direct calls
     
-
 ### Examples / Tools
 
 - RabbitMQ
-- Apache Kafka
+- [[Apache Kafka]]
 - Amazon SQS
 - NATS
     
-
 ### See also
 
 - [[Microservices]]
-- [[RPC]]
-- [[RESTful]]
