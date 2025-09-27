@@ -1,6 +1,7 @@
 ---
 tags:
   - service-communication
+  - microservices
 ---
 **gRPC** is a framework for building fast APIs created by google. It lets clients and servers talk using [[RPC]] instead of just HTTP requests.
 

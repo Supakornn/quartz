@@ -1,6 +1,7 @@
 ---
 tags:
   - service-communication
+  - microservices
 ---
 Microservices need to communicate with each other. Communication can be **synchronous or asynchronous**, and **blocking or non-blocking** depending on the use case.
 

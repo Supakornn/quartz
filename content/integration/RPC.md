@@ -1,6 +1,7 @@
 ---
 tags:
   - service-communication
+  - microservices
 ---
 **RPC** (Remote Procedure Call) is a way for a program to run a function on another computer or server as if it were local.
 

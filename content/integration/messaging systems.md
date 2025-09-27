@@ -1,6 +1,7 @@
 ---
 tags:
   - service-communication
+  - microservices
 ---
 **Messaging Systems** let different parts of a system or different services **talk to each other by sending messages** instead of direct calls. Often used in [[Microservices]].
 

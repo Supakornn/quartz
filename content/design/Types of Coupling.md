@@ -1,6 +1,7 @@
 ---
 tags:
   - software-architecture
+  - microservices
 ---
 **Coupling** = how much services or modules depend on each other. In Microservices, we want **loose coupling** so services can work independently.
 

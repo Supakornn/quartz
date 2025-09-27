@@ -1,6 +1,7 @@
 ---
 tags:
   - service-communication
+  - microservices
 ---
 In Microservices, each service has its **own database**. This makes **traditional ACID transactions across services** difficult. To handle consistency, we use **patterns like 2-Phase Commit (2PC) or Sagas**.
 

@@ -1,6 +1,7 @@
 ---
 tags:
   - service-communication
+  - microservices
 ---
 **Apache Kafka** is a messaging system that lets applications **send, receive, and store streams of messages** in real time. It’s used a lot in [[Microservices]] and [[Event-Driven]] systems.
 
