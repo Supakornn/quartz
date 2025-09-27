@@ -1,4 +1,4 @@
-Welcome to my coding corner! 💻
+Welcome to my dev corner! 💻
 
 This is where I document my programming journey, language explorations, and technical discoveries.
 
