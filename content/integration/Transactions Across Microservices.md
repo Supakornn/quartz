@@ -39,11 +39,11 @@ In Microservices, each service has its **own database**. This makes **traditiona
 
 - Use **2PC** only if **strong consistency** is critical and low scale
 - Use **Sagas** for **high scalability and async workflows**
-- Combine with [[Event-Driven]] / [[Messaging Systems]] for reliability
+- Combine with [[Event-Driven]] / [[Messageing Seystems]] for reliability
     
 ### See also
 
 - [[Microservices]]
 - [[Event-Driven]]
-- [[Messaging Systems]]
+- [[Messageing Seystems]]
 - [[Apache Kafka]]

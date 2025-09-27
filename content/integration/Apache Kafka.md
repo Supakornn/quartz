@@ -30,5 +30,5 @@ tags:
     
 ### See also
 
-- [[Messaging Systems]]
+- [[Messageing Seystems]]
 - [[Kafka Components]]

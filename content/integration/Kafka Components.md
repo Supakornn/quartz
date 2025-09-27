@@ -58,7 +58,7 @@ tags:
 ### See also
 
 - [[Apache Kafka]]
-- [[Messaging Systems]]
+- [[Messageing Seystems]]
 - [[Microservices]]
 - [[Event-Driven]]
     

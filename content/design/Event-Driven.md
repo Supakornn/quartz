@@ -55,7 +55,7 @@ tags:
     
 ### See also
 
-- [[Messaging Systems]]
+- [[Messageing Seystems]]
 - [[Microservices]]
 - [[Microservices Communication]]
 - [[Apache Kafka]]
