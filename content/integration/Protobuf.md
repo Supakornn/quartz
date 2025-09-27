@@ -2,6 +2,7 @@
 tags:
   - service-communication
   - microservices
+  - protobuf
 ---
 **Protobuf** (Protocol Buffers) is a way to store and send data between programs in a **small, fast binary format**. It’s often used with **gRPC**.
 

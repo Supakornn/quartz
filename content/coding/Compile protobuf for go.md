@@ -1,6 +1,7 @@
 ---
 tags:
   - go
+  - protobuf
 ---
 ### Install
 

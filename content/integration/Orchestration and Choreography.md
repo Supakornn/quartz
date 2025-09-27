@@ -1,6 +1,5 @@
 ---
 tags:
-  - service-communication
   - microservices
   - workflow
 ---

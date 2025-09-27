@@ -2,6 +2,7 @@
 tags:
   - service-communication
   - microservices
+  - kafka
 ---
 **Apache Kafka** is a messaging system that lets applications **send, receive, and store streams of messages** in real time. It’s used a lot in [[Microservices]] and [[Event-Driven]] systems.
 
@@ -27,14 +28,7 @@ tags:
 - Debugging can be harder than direct calls
 - Needs proper partitioning and scaling strategy
     
-### Key Terms
-
-- **Producer** → sends messages
-- **Consumer** → receives messages
-- **Topic** → category for messages
-- **Partition** → splits topic for scalability
-- **Broker** → Kafka server that stores messages
-    
 ### See also
 
 - [[Messaging Systems]]
+- [[Kafka Components]]
