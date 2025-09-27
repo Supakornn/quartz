@@ -35,3 +35,4 @@ tags:
 ### See also
 
 - [[Microservices]]
+- [[Apache Kafka]]
