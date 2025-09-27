@@ -36,3 +36,4 @@ tags:
 
 - [[Microservices]]
 - [[Apache Kafka]]
+- [[Event-Driven]]

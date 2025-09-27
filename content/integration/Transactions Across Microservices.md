@@ -27,7 +27,7 @@ In Microservices, each service has its **own database**. This makes **traditiona
 - **Advantages:**
     
     - Non-blocking → scalable
-    - Works well with asynchronous/event-driven systems
+    - Works well with asynchronous / [[Event-Driven]] systems
         
 - **Disadvantages:**
     
@@ -38,10 +38,8 @@ In Microservices, each service has its **own database**. This makes **traditiona
 ### Key Tips
 
 - Use **2PC** only if **strong consistency** is critical and low scale
-    
 - Use **Sagas** for **high scalability and async workflows**
-    
-- Combine with[[Event-Driven]]/ [[Messaging Systems]] for reliability
+- Combine with [[Event-Driven]] / [[Messaging Systems]] for reliability
     
 ### See also
 
