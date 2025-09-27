@@ -27,5 +27,9 @@ tags:
 ### Disadvantages
 
 - Can be less efficient for complex operations
-- Over-fetching or under-fetching data sometimes happens
+- Over-fetching or under fetching data sometimes happens
 - No built-in security (must use HTTPS, tokens, etc.)
+
+### See also
+
+- [[gRPC]]

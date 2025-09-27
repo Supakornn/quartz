@@ -23,3 +23,8 @@ tags:
 - Harder to debug than local calls
 - Tightly coupled: client must know server interface
 - Versioning and compatibility can be tricky
+
+### See also
+
+- [[gRPC]]
+- [[RESTful]]

@@ -16,14 +16,14 @@ tags:
 
 - Fast and efficient (binary format is smaller than JSON)
 - Strongly typed: reduces errors
-- Supports streaming for real-time data
+- Supports streaming for real time data
 - Works with many programming languages
     
 ### Disadvantages
 
 - More complex than REST
 - Requires learning protobuf
-- Less human-readable than JSON
+- Less human readable than JSON
 - Tooling is good but not as simple as [[RESTful]] for beginners
 
 ### See also
