@@ -28,6 +28,7 @@ tags:
 - Requires more DevOps and automation
 - Harder to keep data consistent across services
 - Higher initial setup cost than [[Monolithic]]
+- Tight coupling between services increases risk of cascading failures ([[Types of Coupling]])
 
 ### See also
 
