@@ -17,14 +17,14 @@ title: All files modified
 <!-- QueryToSerialize: TABLE file.folder as "Folder", dateformat(file.mtime,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT file.mtime DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
 <!-- SerializedQuery: TABLE file.folder as "Folder", dateformat(file.mtime,"MMM d, yyyy") as "Modified" FROM -"tags" AND -#slurp SORT file.mtime DESC WHERE file.name != this.file.name AND file.name != "index" AND draft != "true" -->
 
-| File                                                                       | Folder       | Modified     |
-| -------------------------------------------------------------------------- | ------------ | ------------ |
-| [[dev/Compile protobuf for go.md\|Compile protobuf for go]]                | dev          | Sep 27, 2025 |
-| [[blog/WebAssembly with Zig (TH).md\|WebAssembly with Zig (TH)]]           | blog         | Sep 27, 2025 |
-| [[blog/WebDevelopment with HTMX (TH).md\|WebDevelopment with HTMX (TH)]]   | blog         | Sep 26, 2025 |
-| [[knowledge/INT134 exam preparation.md\|INT134 exam preparation]]          | knowledge    | Sep 26, 2025 |
-| [[cache.md\|cache]]                                                        |              | Sep 26, 2025 |
-| [[cybersec/ctf/STH-Mini-Web-CTF-2025 (TH).md\|STH-Mini-Web-CTF-2025 (TH)]] | cybersec/ctf | Sep 26, 2025 |
+| File                                                              | Folder       | Modified     |
+| ----------------------------------------------------------------- | ------------ | ------------ |
+| [[dev/Compile protobuf for go.md\|Compile protobuf for go]]       | dev          | Sep 27, 2025 |
+| [[blog/WebAssembly with Zig.md\|WebAssembly with Zig]]            | blog         | Sep 27, 2025 |
+| [[blog/WebDevelopment with HTMX.md\|WebDevelopment with HTMX]]    | blog         | Sep 26, 2025 |
+| [[knowledge/INT134 exam preparation.md\|INT134 exam preparation]] | knowledge    | Sep 26, 2025 |
+| [[cache.md\|cache]]                                               |              | Sep 26, 2025 |
+| [[cybersec/ctf/STH-Mini-Web-CTF-2025.md\|STH-Mini-Web-CTF-2025]]  | cybersec/ctf | Sep 26, 2025 |
 <!-- SerializedQuery END -->
 
 %%
