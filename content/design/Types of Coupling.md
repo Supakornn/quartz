@@ -32,4 +32,7 @@ tags:
 - Avoid: pass-through calls, shared databases, tightly linked logic
 - Prefer: independent services, async communication, clear domain boundari
 
-### See 
+### See also
+
+- [[Microservices]]
+- [[Monolithic]]
