@@ -1,0 +1,6 @@
+---
+tags:
+  - go
+---
+### Install
+
