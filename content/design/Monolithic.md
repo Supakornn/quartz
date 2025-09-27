@@ -16,7 +16,6 @@ tags:
 - Simple operations for small teams
 - Fast initial development
     
-
 ### Disadvantages
 
 - Hard to scale individual parts
