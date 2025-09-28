@@ -1,13 +1,13 @@
-1. go to Setting > Appearance > turn on Translucent window
+1. go to Setting > Appearance > Advance > turn on Translucent window
 2. open terminal and go to `.obsidian/snippets/` in your directory
-3. create a css file eg. translucent.css > and copy&pasted
+3. create a css file eg. translucent.css > and copy&paste this css
 ```css
 body {
-    --background-primary: #000 !important;
+    --background-primary: #000 !important; # bg color
     --titlebar-background: transparent !important;
     --titlebar-background-focused: var(--titlebar-background);
     --text-normal: #f1f1f1 !Important;
-    --workspace-background-translucent: rgba(var(--mono-rgb-0), 0.5);
+    --workspace-background-translucent: rgba(var(--mono-rgb-0), 0.8); # 0.8 is opacity
     
 }
 
@@ -39,3 +39,6 @@ body {
     background: transparent;
 }
 ```
+
+5. go to Setting > Appearance > CSS Snippets > turn on you css
+6. there you go! 🎉
