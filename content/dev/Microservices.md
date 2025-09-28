@@ -1,5 +1,0 @@
----
-tags:
-  - microservices
-  - software-archtiecture
----
