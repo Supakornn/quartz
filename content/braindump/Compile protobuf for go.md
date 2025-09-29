@@ -2,6 +2,8 @@
 tags:
   - go
 ---
+### How to:
+
 1. Install protoc-gen-go plugin for go
 
 ```shell

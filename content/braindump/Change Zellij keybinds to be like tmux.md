@@ -1,3 +1,7 @@
+---
+tags:
+  - config
+---
 ### Goals:
 
 - creating new tabs and panes using familiar shortcuts (Ctrl+a > c)
