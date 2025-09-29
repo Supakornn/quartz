@@ -12,7 +12,7 @@ body {
     --titlebar-background: transparent !important;
     --titlebar-background-focused: var(--titlebar-background);
     --text-normal: #f1f1f1 !Important;
-    --workspace-background-translucent: rgba(var(--mono-rgb-0), 0.8); # 0.8 is opacity
+    --workspace-background-translucent: rgba(var(--mono-rgb-0), 0.5); # 0.5 is opacity
     
 }
 
