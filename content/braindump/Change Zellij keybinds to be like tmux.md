@@ -7,6 +7,7 @@
 
 1. go to your zellij config file `nvim ~/.config/zellij/config.kdl`
 2. edit your config like this
+
 ```js
 keybinds clear-defaults=true {
     normal {
