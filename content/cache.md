@@ -6,9 +6,11 @@
 
 - [Learn x86-64 assembly by writing a GUI from scratch](https://gaultier.github.io/blog/x11_x64.html)
 - [os tutorial](https://github.com/cfenollosa/os-tutorial)
-- [DSA 48 hours]https://www.freecodecamp.org/news/learn-data-structures-and-algorithms-2/
+- [DSA 48 hours](https://www.freecodecamp.org/news/learn-data-structures-and-algorithms-2/)
+- [LLM From Scratch](https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/)
+- [go-backend-clean-architecture](https://github.com/amitshekhariitbhu/go-backend-clean-architecture)
+- [LeetCode Meditations](https://www.freecodecamp.org/news/leetcode-dsa-concepts-handbook/)
   
 ### Etc.
 
-- [Developer Roadmaps]https://roadmap.sh/?fl=0
-
+- [Developer Roadmaps](https://roadmap.sh/?fl=0)
