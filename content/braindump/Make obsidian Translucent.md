@@ -2,7 +2,6 @@
 tags:
   - obsidian
 ---
-
 1. go to Setting > Appearance > Advance > turn on Translucent window
 2. open terminal and go to `.obsidian/snippets/` in your directory
 3. create a css file eg. translucent.css > and copy&paste this css
