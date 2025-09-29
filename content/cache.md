@@ -10,7 +10,8 @@
 - [LLM From Scratch](https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/)
 - [go-backend-clean-architecture](https://github.com/amitshekhariitbhu/go-backend-clean-architecture)
 - [LeetCode Meditations](https://www.freecodecamp.org/news/leetcode-dsa-concepts-handbook/)
-  
+- [LangGraph](https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/)
+- [A Compiler Writing Journey](https://github.com/DoctorWkt/acwj)
 ### Etc.
 
 - [Developer Roadmaps](https://roadmap.sh/?fl=0)
