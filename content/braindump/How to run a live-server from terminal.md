@@ -7,14 +7,14 @@ One of them is the lack of a _live-server_ feature.
 
 Here’s how I solved it:
 
-1. [live-server](https://www.npmjs.com/package/live-server)
-
-```shell
-live-server
-```
-
-2. [bun](https://bun.com)
+1. [bun](https://bun.com) recommended)
 
 ```shell
 bun index.html
+```
+
+2. [live-server](https://www.npmjs.com/package/live-server)
+
+```shell
+live-server
 ```
