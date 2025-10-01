@@ -1,6 +1,7 @@
 ### Research
 
 - [LongCat-Flash-Thinking Technical Report](https://arxiv.org/pdf/2509.18883)
+- [GPGPU PROCESSING IN CUDA ARCHITECTURE](https://arxiv.org/pdf/1202.4347)
 
 ### Tutorials
 
