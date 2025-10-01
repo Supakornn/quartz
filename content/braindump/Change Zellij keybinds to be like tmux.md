@@ -1,6 +1,6 @@
 ---
 tags:
-  - config
+  - tools
 ---
 1. go to your zellij config file `nvim ~/.config/zellij/config.kdl`
 2. edit your keybinds like this

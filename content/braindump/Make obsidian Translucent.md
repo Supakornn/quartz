@@ -1,6 +1,6 @@
 ---
 tags:
-  - obsidian
+  - tools
 ---
 1. go to Setting > Appearance > Advance > turn on Translucent window
 2. open terminal and go to `.obsidian/snippets/` in your directory
